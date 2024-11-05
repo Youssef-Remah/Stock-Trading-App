@@ -5,6 +5,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{239DA3EB-7D2D-4766-A351-2488E2D360F3}|StockTradingApp\\StockTradingApp.csproj|d:\\dot-net-projects\\stocktradingapp\\stocktradingapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{239DA3EB-7D2D-4766-A351-2488E2D360F3}|StockTradingApp\\StockTradingApp.csproj|solutionrelative:stocktradingapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{239DA3EB-7D2D-4766-A351-2488E2D360F3}|StockTradingApp\\StockTradingApp.csproj|d:\\dot-net-projects\\stocktradingapp\\stocktradingapp\\controllers\\tradecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{239DA3EB-7D2D-4766-A351-2488E2D360F3}|StockTradingApp\\StockTradingApp.csproj|solutionrelative:stocktradingapp\\controllers\\tradecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +18,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TradeController.cs",
+              "DocumentMoniker": "D:\\Dot-Net-Projects\\StockTradingApp\\StockTradingApp\\Controllers\\TradeController.cs",
+              "RelativeDocumentMoniker": "StockTradingApp\\Controllers\\TradeController.cs",
+              "ToolTip": "D:\\Dot-Net-Projects\\StockTradingApp\\StockTradingApp\\Controllers\\TradeController.cs",
+              "RelativeToolTip": "StockTradingApp\\Controllers\\TradeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T09:49:38.714Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -24,7 +41,7 @@
               "RelativeDocumentMoniker": "StockTradingApp\\Program.cs",
               "ToolTip": "D:\\Dot-Net-Projects\\StockTradingApp\\StockTradingApp\\Program.cs",
               "RelativeToolTip": "StockTradingApp\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-05T08:28:16.372Z",
               "EditorCaption": ""
