@@ -3,12 +3,28 @@
   "WorkspaceRootPath": "D:\\Dot-Net-Projects\\StockTradingApp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{239DA3EB-7D2D-4766-A351-2488E2D360F3}|StockTradingApp\\StockTradingApp.csproj|d:\\dot-net-projects\\stocktradingapp\\stocktradingapp\\controllers\\tradecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{239DA3EB-7D2D-4766-A351-2488E2D360F3}|StockTradingApp\\StockTradingApp.csproj|solutionrelative:stocktradingapp\\controllers\\tradecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C533B9CC-DE86-430E-AD1D-2B078AF8388B}|Services\\Services.csproj|d:\\dot-net-projects\\stocktradingapp\\services\\finnhubservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C533B9CC-DE86-430E-AD1D-2B078AF8388B}|Services\\Services.csproj|solutionrelative:services\\finnhubservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{239DA3EB-7D2D-4766-A351-2488E2D360F3}|StockTradingApp\\StockTradingApp.csproj|d:\\dot-net-projects\\stocktradingapp\\stocktradingapp\\wwwroot\\scripts\\finnhubscript.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{239DA3EB-7D2D-4766-A351-2488E2D360F3}|StockTradingApp\\StockTradingApp.csproj|solutionrelative:stocktradingapp\\wwwroot\\scripts\\finnhubscript.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{239DA3EB-7D2D-4766-A351-2488E2D360F3}|StockTradingApp\\StockTradingApp.csproj|d:\\dot-net-projects\\stocktradingapp\\stocktradingapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{239DA3EB-7D2D-4766-A351-2488E2D360F3}|StockTradingApp\\StockTradingApp.csproj|solutionrelative:stocktradingapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{239DA3EB-7D2D-4766-A351-2488E2D360F3}|StockTradingApp\\StockTradingApp.csproj|d:\\dot-net-projects\\stocktradingapp\\stocktradingapp\\controllers\\tradecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{239DA3EB-7D2D-4766-A351-2488E2D360F3}|StockTradingApp\\StockTradingApp.csproj|solutionrelative:stocktradingapp\\controllers\\tradecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{239DA3EB-7D2D-4766-A351-2488E2D360F3}|StockTradingApp\\StockTradingApp.csproj|d:\\dot-net-projects\\stocktradingapp\\stocktradingapp\\views\\trade\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{239DA3EB-7D2D-4766-A351-2488E2D360F3}|StockTradingApp\\StockTradingApp.csproj|solutionrelative:stocktradingapp\\views\\trade\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{239DA3EB-7D2D-4766-A351-2488E2D360F3}|StockTradingApp\\StockTradingApp.csproj|d:\\dot-net-projects\\stocktradingapp\\stocktradingapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{239DA3EB-7D2D-4766-A351-2488E2D360F3}|StockTradingApp\\StockTradingApp.csproj|solutionrelative:stocktradingapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,30 +34,82 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "FinnhubService.cs",
+              "DocumentMoniker": "D:\\Dot-Net-Projects\\StockTradingApp\\Services\\FinnhubService.cs",
+              "RelativeDocumentMoniker": "Services\\FinnhubService.cs",
+              "ToolTip": "D:\\Dot-Net-Projects\\StockTradingApp\\Services\\FinnhubService.cs",
+              "RelativeToolTip": "Services\\FinnhubService.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAswBcAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T15:47:48.26Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FinnhubScript.js",
+              "DocumentMoniker": "D:\\Dot-Net-Projects\\StockTradingApp\\StockTradingApp\\wwwroot\\Scripts\\FinnhubScript.js",
+              "RelativeDocumentMoniker": "StockTradingApp\\wwwroot\\Scripts\\FinnhubScript.js",
+              "ToolTip": "D:\\Dot-Net-Projects\\StockTradingApp\\StockTradingApp\\wwwroot\\Scripts\\FinnhubScript.js",
+              "RelativeToolTip": "StockTradingApp\\wwwroot\\Scripts\\FinnhubScript.js",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACcAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-11-05T14:09:48.291Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\Dot-Net-Projects\\StockTradingApp\\StockTradingApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "StockTradingApp\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\Dot-Net-Projects\\StockTradingApp\\StockTradingApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "StockTradingApp\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-05T14:04:18.633Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Dot-Net-Projects\\StockTradingApp\\StockTradingApp\\Views\\Trade\\Index.cshtml",
+              "RelativeDocumentMoniker": "StockTradingApp\\Views\\Trade\\Index.cshtml",
+              "ToolTip": "D:\\Dot-Net-Projects\\StockTradingApp\\StockTradingApp\\Views\\Trade\\Index.cshtml",
+              "RelativeToolTip": "StockTradingApp\\Views\\Trade\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-05T13:50:33.505Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "TradeController.cs",
               "DocumentMoniker": "D:\\Dot-Net-Projects\\StockTradingApp\\StockTradingApp\\Controllers\\TradeController.cs",
               "RelativeDocumentMoniker": "StockTradingApp\\Controllers\\TradeController.cs",
               "ToolTip": "D:\\Dot-Net-Projects\\StockTradingApp\\StockTradingApp\\Controllers\\TradeController.cs",
               "RelativeToolTip": "StockTradingApp\\Controllers\\TradeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABoAAAAAAAAAAAAcwCYAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-05T09:49:38.714Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Dot-Net-Projects\\StockTradingApp\\StockTradingApp\\Program.cs",
               "RelativeDocumentMoniker": "StockTradingApp\\Program.cs",
               "ToolTip": "D:\\Dot-Net-Projects\\StockTradingApp\\StockTradingApp\\Program.cs",
               "RelativeToolTip": "StockTradingApp\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-05T08:28:16.372Z",
               "EditorCaption": ""

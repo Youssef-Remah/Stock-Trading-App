@@ -14,7 +14,7 @@ namespace Services
 
 		public FinnhubService(IConfiguration configuration, IHttpClientFactory httpClientFactory)
 		{
-			configuration = _configuration;
+			_configuration = configuration;
 
 			_httpClientFactory = httpClientFactory;
 		}

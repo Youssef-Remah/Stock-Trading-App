@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "Hash": "Zua9TEWupNTOcZLPhskz9go2A7AghHsiGoTgY332oAo=",
+  "Source": "StockTradingApp",
+  "BasePath": "_content/StockTradingApp",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "StockTradingApp\\wwwroot",
+      "Source": "StockTradingApp",
+      "ContentRoot": "D:\\Dot-Net-Projects\\StockTradingApp\\StockTradingApp\\wwwroot\\",
+      "BasePath": "_content/StockTradingApp",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\Dot-Net-Projects\\StockTradingApp\\StockTradingApp\\wwwroot\\Scripts\\FinnhubScript.js",
+      "SourceId": "StockTradingApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Dot-Net-Projects\\StockTradingApp\\StockTradingApp\\wwwroot\\",
+      "BasePath": "_content/StockTradingApp",
+      "RelativePath": "Scripts/FinnhubScript.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Scripts\\FinnhubScript.js"
+    },
+    {
+      "Identity": "D:\\Dot-Net-Projects\\StockTradingApp\\StockTradingApp\\wwwroot\\StyleSheet.css",
+      "SourceId": "StockTradingApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Dot-Net-Projects\\StockTradingApp\\StockTradingApp\\wwwroot\\",
+      "BasePath": "_content/StockTradingApp",
+      "RelativePath": "StyleSheet.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\StyleSheet.css"
+    }
+  ]
+}

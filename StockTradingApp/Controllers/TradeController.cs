@@ -24,7 +24,7 @@ namespace StockTradingApp.Controllers
 			IFinnhubService finnhubService
 		)
 		{
-			configuration = _configuration;
+			_configuration = configuration;
 
 			_tradingOptions = tradingOptions.Value;
 

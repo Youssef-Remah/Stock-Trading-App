@@ -1,0 +1,12 @@
+D:\Dot-Net-Projects\StockTradingApp\ServiceContracts\bin\Debug\net8.0\ServiceContracts.deps.json
+D:\Dot-Net-Projects\StockTradingApp\ServiceContracts\bin\Debug\net8.0\ServiceContracts.dll
+D:\Dot-Net-Projects\StockTradingApp\ServiceContracts\bin\Debug\net8.0\ServiceContracts.pdb
+D:\Dot-Net-Projects\StockTradingApp\ServiceContracts\obj\Debug\net8.0\ServiceContracts.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dot-Net-Projects\StockTradingApp\ServiceContracts\obj\Debug\net8.0\ServiceContracts.AssemblyInfoInputs.cache
+D:\Dot-Net-Projects\StockTradingApp\ServiceContracts\obj\Debug\net8.0\ServiceContracts.AssemblyInfo.cs
+D:\Dot-Net-Projects\StockTradingApp\ServiceContracts\obj\Debug\net8.0\ServiceContracts.csproj.CoreCompileInputs.cache
+D:\Dot-Net-Projects\StockTradingApp\ServiceContracts\obj\Debug\net8.0\ServiceContracts.sourcelink.json
+D:\Dot-Net-Projects\StockTradingApp\ServiceContracts\obj\Debug\net8.0\ServiceContracts.dll
+D:\Dot-Net-Projects\StockTradingApp\ServiceContracts\obj\Debug\net8.0\refint\ServiceContracts.dll
+D:\Dot-Net-Projects\StockTradingApp\ServiceContracts\obj\Debug\net8.0\ServiceContracts.pdb
+D:\Dot-Net-Projects\StockTradingApp\ServiceContracts\obj\Debug\net8.0\ref\ServiceContracts.dll
