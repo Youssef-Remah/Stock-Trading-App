@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "D:\\Dot-Net-Projects\\StockTradingApp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F621CB66-21AC-41EA-AEDB-635704C8F153}|Entities\\Entities.csproj|d:\\dot-net-projects\\stocktradingapp\\entities\\sellorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F621CB66-21AC-41EA-AEDB-635704C8F153}|Entities\\Entities.csproj|solutionrelative:entities\\sellorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F621CB66-21AC-41EA-AEDB-635704C8F153}|Entities\\Entities.csproj|d:\\dot-net-projects\\stocktradingapp\\entities\\buyorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F621CB66-21AC-41EA-AEDB-635704C8F153}|Entities\\Entities.csproj|solutionrelative:entities\\buyorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{239DA3EB-7D2D-4766-A351-2488E2D360F3}|StockTradingApp\\StockTradingApp.csproj|d:\\dot-net-projects\\stocktradingapp\\stocktradingapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{239DA3EB-7D2D-4766-A351-2488E2D360F3}|StockTradingApp\\StockTradingApp.csproj|solutionrelative:stocktradingapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -19,12 +27,38 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "SellOrder.cs",
+              "DocumentMoniker": "D:\\Dot-Net-Projects\\StockTradingApp\\Entities\\SellOrder.cs",
+              "RelativeDocumentMoniker": "Entities\\SellOrder.cs",
+              "ToolTip": "D:\\Dot-Net-Projects\\StockTradingApp\\Entities\\SellOrder.cs",
+              "RelativeToolTip": "Entities\\SellOrder.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T09:25:42.992Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BuyOrder.cs",
+              "DocumentMoniker": "D:\\Dot-Net-Projects\\StockTradingApp\\Entities\\BuyOrder.cs",
+              "RelativeDocumentMoniker": "Entities\\BuyOrder.cs",
+              "ToolTip": "D:\\Dot-Net-Projects\\StockTradingApp\\Entities\\BuyOrder.cs",
+              "RelativeToolTip": "Entities\\BuyOrder.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T09:24:41.941Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Dot-Net-Projects\\StockTradingApp\\StockTradingApp\\Program.cs",
               "RelativeDocumentMoniker": "StockTradingApp\\Program.cs",
               "ToolTip": "D:\\Dot-Net-Projects\\StockTradingApp\\StockTradingApp\\Program.cs",
               "RelativeToolTip": "StockTradingApp\\Program.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAuwA8AAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-05T08:28:16.372Z",
               "EditorCaption": ""

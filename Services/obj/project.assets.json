@@ -259,9 +259,22 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "Entities/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Entities.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Entities.dll": {}
+        }
+      },
       "ServiceContracts/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Entities": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/ServiceContracts.dll": {}
         },
@@ -736,6 +749,11 @@
         "microsoft.extensions.primitives.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "Entities/1.0.0": {
+      "type": "project",
+      "path": "../Entities/Entities.csproj",
+      "msbuildProject": "../Entities/Entities.csproj"
     },
     "ServiceContracts/1.0.0": {
       "type": "project",
