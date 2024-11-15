@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "D:\\Dot-Net-Projects\\StockTradingApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{17F8AFEC-CAB7-471E-9966-D4C0FD632E7F}|ServiceContracts\\ServiceContracts.csproj|d:\\dot-net-projects\\stocktradingapp\\servicecontracts\\istocksservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{17F8AFEC-CAB7-471E-9966-D4C0FD632E7F}|ServiceContracts\\ServiceContracts.csproj|solutionrelative:servicecontracts\\istocksservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{239DA3EB-7D2D-4766-A351-2488E2D360F3}|StockTradingApp\\StockTradingApp.csproj|d:\\dot-net-projects\\stocktradingapp\\stocktradingapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{239DA3EB-7D2D-4766-A351-2488E2D360F3}|StockTradingApp\\StockTradingApp.csproj|solutionrelative:stocktradingapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -23,19 +19,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "IStocksService.cs",
-              "DocumentMoniker": "D:\\Dot-Net-Projects\\StockTradingApp\\ServiceContracts\\IStocksService.cs",
-              "RelativeDocumentMoniker": "ServiceContracts\\IStocksService.cs",
-              "ToolTip": "D:\\Dot-Net-Projects\\StockTradingApp\\ServiceContracts\\IStocksService.cs",
-              "RelativeToolTip": "ServiceContracts\\IStocksService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T16:05:36.955Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Dot-Net-Projects\\StockTradingApp\\StockTradingApp\\Program.cs",
               "RelativeDocumentMoniker": "StockTradingApp\\Program.cs",
@@ -43,8 +26,7 @@
               "RelativeToolTip": "StockTradingApp\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T08:28:16.372Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-05T08:28:16.372Z"
             },
             {
               "$type": "Bookmark",
