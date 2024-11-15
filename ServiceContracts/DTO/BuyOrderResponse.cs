@@ -12,7 +12,6 @@ namespace ServiceContracts.DTO
         /// The unique ID of the buy order
         /// </summary>
         [Display(Name = "Order ID")]
-        [Key]
         public Guid BuyOrderID { get; set; }
 
 
@@ -20,7 +19,6 @@ namespace ServiceContracts.DTO
         /// The unique symbol of the stock
         /// </summary>
         [Display(Name = "Stock Symbol")]
-        [Required(ErrorMessage = "{0} cannot be blank!")]
         public string? StockSymbol { get; set; }
 
 
@@ -43,7 +41,6 @@ namespace ServiceContracts.DTO
         /// The number of stocks (shares) to buy
         /// </summary>
         [Display(Name = "Quantity")]
-        [Range(1, 100000, ErrorMessage = "You can buy maximum of {2} shares in single order. Minimum is {1}.")]
         public uint Quantity { get; set; }
 
 
@@ -51,7 +48,6 @@ namespace ServiceContracts.DTO
         /// The price of each stock (shares)
         /// </summary>
         [Display(Name = "price")]
-        [Range(1, 100000, ErrorMessage = "The maximum {0} of stock is {2}. Minimum is {1}.")]
         public double Price { get; set; }
 
 
