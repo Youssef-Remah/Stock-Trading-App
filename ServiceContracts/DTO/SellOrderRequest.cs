@@ -4,14 +4,14 @@ using System.ComponentModel.DataAnnotations;
 namespace ServiceContracts.DTO
 {
     /// <summary>
-    /// DTO class representing a buy order to purchase the stocks - that can be used while inserting / updating
+    /// DTO class that represents a sell order - that can be used while inserting or updating
     /// </summary>
-    public class BuyOrderRequest : IValidatableObject
+    public class SellOrderRequest : IValidatableObject
     {
         /// <summary>
         /// The unique symbol of the stock
         /// </summary>
-        [Display(Name = "StockSymbol")]
+        [Display(Name = "Stock Symbol")]
         [Required(ErrorMessage = "{0} cannot be blank!")]
         public string? StockSymbol { get; set; }
 
@@ -25,14 +25,14 @@ namespace ServiceContracts.DTO
 
 
         /// <summary>
-        /// Date and time of order when it is placed by the user
+        /// Date and Time of order when it is placed by the user
         /// </summary>
         [Display(Name = "Order Date")]
         public DateTime DateAndTimeOfOrder { get; set; }
 
 
         /// <summary>
-        /// The number of stocks (shares) to buy
+        /// The number of stocks (shares) to sell
         /// </summary>
         [Display(Name = "Quantity")]
         [Range(1, 100000, ErrorMessage = "You can buy maximum of {2} shares in single order. Minimum is {1}.")]
@@ -47,17 +47,13 @@ namespace ServiceContracts.DTO
         public double Price { get; set; }
 
 
-        /// <summary>
-        /// Converts the current object of BuyOrderRequest to a new object of BuyOrder
-        /// </summary>
-        /// <returns>A new object of BuyOrder type</returns>
-        public BuyOrder ToBuyOrder()
+        public SellOrder ToSellOrder()
         {
             return new()
             {
-                StockSymbol = StockSymbol,
-
                 StockName = StockName,
+
+                StockSymbol = StockSymbol,
 
                 DateAndTimeOfOrder = DateAndTimeOfOrder,
 
@@ -77,9 +73,9 @@ namespace ServiceContracts.DTO
         {
             List<ValidationResult> results = new();
 
-            if (DateAndTimeOfOrder < Convert.ToDateTime("2000-01-01"))
+            if (DateAndTimeOfOrder < Convert.ToDateTime("2000-01-01")) 
             {
-                results.Add(new ValidationResult("Date of the order should not be older than Jan 01, 2000"));
+                results.Add(new ValidationResult("Date of the order should not be older than Jan 01, 2000."));
             }
 
             return results;

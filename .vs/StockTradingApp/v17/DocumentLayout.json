@@ -3,14 +3,6 @@
   "WorkspaceRootPath": "D:\\Dot-Net-Projects\\StockTradingApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{17F8AFEC-CAB7-471E-9966-D4C0FD632E7F}|ServiceContracts\\ServiceContracts.csproj|d:\\dot-net-projects\\stocktradingapp\\servicecontracts\\dto\\buyorderrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{17F8AFEC-CAB7-471E-9966-D4C0FD632E7F}|ServiceContracts\\ServiceContracts.csproj|solutionrelative:servicecontracts\\dto\\buyorderrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{17F8AFEC-CAB7-471E-9966-D4C0FD632E7F}|ServiceContracts\\ServiceContracts.csproj|d:\\dot-net-projects\\stocktradingapp\\servicecontracts\\dto\\buyorderresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{17F8AFEC-CAB7-471E-9966-D4C0FD632E7F}|ServiceContracts\\ServiceContracts.csproj|solutionrelative:servicecontracts\\dto\\buyorderresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{239DA3EB-7D2D-4766-A351-2488E2D360F3}|StockTradingApp\\StockTradingApp.csproj|d:\\dot-net-projects\\stocktradingapp\\stocktradingapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{239DA3EB-7D2D-4766-A351-2488E2D360F3}|StockTradingApp\\StockTradingApp.csproj|solutionrelative:stocktradingapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -22,43 +14,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 471,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "BuyOrderResponse.cs",
-              "DocumentMoniker": "D:\\Dot-Net-Projects\\StockTradingApp\\ServiceContracts\\DTO\\BuyOrderResponse.cs",
-              "RelativeDocumentMoniker": "ServiceContracts\\DTO\\BuyOrderResponse.cs",
-              "ToolTip": "D:\\Dot-Net-Projects\\StockTradingApp\\ServiceContracts\\DTO\\BuyOrderResponse.cs",
-              "RelativeToolTip": "ServiceContracts\\DTO\\BuyOrderResponse.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAgAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T14:43:52.99Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "BuyOrderRequest.cs",
-              "DocumentMoniker": "D:\\Dot-Net-Projects\\StockTradingApp\\ServiceContracts\\DTO\\BuyOrderRequest.cs",
-              "RelativeDocumentMoniker": "ServiceContracts\\DTO\\BuyOrderRequest.cs",
-              "ToolTip": "D:\\Dot-Net-Projects\\StockTradingApp\\ServiceContracts\\DTO\\BuyOrderRequest.cs",
-              "RelativeToolTip": "ServiceContracts\\DTO\\BuyOrderRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T13:56:43.016Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Dot-Net-Projects\\StockTradingApp\\StockTradingApp\\Program.cs",
               "RelativeDocumentMoniker": "StockTradingApp\\Program.cs",
               "ToolTip": "D:\\Dot-Net-Projects\\StockTradingApp\\StockTradingApp\\Program.cs",
               "RelativeToolTip": "StockTradingApp\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-05T08:28:16.372Z",
               "EditorCaption": ""
