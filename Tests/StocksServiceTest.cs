@@ -8,10 +8,29 @@ namespace Tests
     {
         private readonly StocksService _stocksService;
 
+
         public StocksServiceTest()
         {
             _stocksService = new();
         }
+
+
+        private BuyOrderRequest CreateDefaultBuyOrderRequest()
+        {
+            return new()
+            {
+                StockName = "Microsoft",
+
+                StockSymbol = "MSFT",
+
+                DateAndTimeOfOrder = Convert.ToDateTime("2024-11-16"),
+
+                Quantity = 500,
+
+                Price = 500,
+            };
+        }
+
 
         #region CreateBuyOrder
 
@@ -40,18 +59,10 @@ namespace Tests
         {
             //Arrange
 
-            BuyOrderRequest buyOrderRequest = new()
-            {
-                StockName = "Microsoft",
+            BuyOrderRequest buyOrderRequest = CreateDefaultBuyOrderRequest();
 
-                StockSymbol = "MSFT",
+            buyOrderRequest.Quantity = quantity;
 
-                DateAndTimeOfOrder = Convert.ToDateTime("2000-01-01"),
-
-                Quantity = quantity,
-
-                Price = 500,
-            };
 
             //Assert
 
@@ -69,18 +80,10 @@ namespace Tests
         {
             //Arrange
 
-            BuyOrderRequest buyOrderRequest = new()
-            {
-                StockName = "Microsoft",
+            BuyOrderRequest buyOrderRequest = CreateDefaultBuyOrderRequest();
 
-                StockSymbol = "MSFT",
+            buyOrderRequest.Quantity = quantity;
 
-                DateAndTimeOfOrder = Convert.ToDateTime("2000-01-01"),
-
-                Quantity = quantity,
-
-                Price = 500,
-            };
 
             //Assert
 
@@ -98,18 +101,9 @@ namespace Tests
         {
             //Arrange
 
-            BuyOrderRequest buyOrderRequest = new()
-            {
-                StockName = "Microsoft",
+            BuyOrderRequest buyOrderRequest = CreateDefaultBuyOrderRequest();
 
-                StockSymbol = "MSFT",
-
-                DateAndTimeOfOrder = Convert.ToDateTime("2000-01-01"),
-
-                Quantity = 500,
-
-                Price = price,
-            };
+            buyOrderRequest.Price = price;
 
 
             //Assert
@@ -128,18 +122,9 @@ namespace Tests
         {
             //Arrange
 
-            BuyOrderRequest buyOrderRequest = new()
-            {
-                StockName = "Microsoft",
+            BuyOrderRequest buyOrderRequest = CreateDefaultBuyOrderRequest();
 
-                StockSymbol = "MSFT",
-
-                DateAndTimeOfOrder = Convert.ToDateTime("2000-01-01"),
-
-                Quantity = 500,
-
-                Price = price,
-            };
+            buyOrderRequest.Price = price;
 
 
             //Assert
@@ -157,18 +142,9 @@ namespace Tests
         {
             //Arrange
 
-            BuyOrderRequest buyOrderRequest = new()
-            {
-                StockName = "Microsoft",
+            BuyOrderRequest buyOrderRequest = CreateDefaultBuyOrderRequest();
 
-                StockSymbol = null,
-
-                DateAndTimeOfOrder = Convert.ToDateTime("2000-01-01"),
-
-                Quantity = 500,
-
-                Price = 500,
-            };
+            buyOrderRequest.StockSymbol = null;
 
 
             //Assert
@@ -187,18 +163,9 @@ namespace Tests
         {
             //Arrange
 
-            BuyOrderRequest buyOrderRequest = new()
-            {
-                StockName = "Microsoft",
+            BuyOrderRequest buyOrderRequest = CreateDefaultBuyOrderRequest();
 
-                StockSymbol = null,
-
-                DateAndTimeOfOrder = Convert.ToDateTime(orderDate),
-
-                Quantity = 500,
-
-                Price = 500,
-            };
+            buyOrderRequest.DateAndTimeOfOrder = Convert.ToDateTime(orderDate);
 
 
             //Assert
@@ -217,18 +184,7 @@ namespace Tests
         {
             //Arrange
 
-            BuyOrderRequest buyOrderRequest = new()
-            {
-                StockName = "Microsoft",
-
-                StockSymbol = null,
-
-                DateAndTimeOfOrder = Convert.ToDateTime("2024-11-16"),
-
-                Quantity = 500,
-
-                Price = 500,
-            };
+            BuyOrderRequest buyOrderRequest = CreateDefaultBuyOrderRequest();
 
 
             //Act
