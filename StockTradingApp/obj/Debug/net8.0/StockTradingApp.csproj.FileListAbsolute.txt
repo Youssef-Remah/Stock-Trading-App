@@ -41,3 +41,5 @@ D:\Dot-Net-Projects\StockTradingApp\StockTradingApp\obj\Debug\net8.0\refint\Stoc
 D:\Dot-Net-Projects\StockTradingApp\StockTradingApp\obj\Debug\net8.0\StockTradingApp.pdb
 D:\Dot-Net-Projects\StockTradingApp\StockTradingApp\obj\Debug\net8.0\StockTradingApp.genruntimeconfig.cache
 D:\Dot-Net-Projects\StockTradingApp\StockTradingApp\obj\Debug\net8.0\ref\StockTradingApp.dll
+D:\Dot-Net-Projects\StockTradingApp\StockTradingApp\bin\Debug\net8.0\Entities.dll
+D:\Dot-Net-Projects\StockTradingApp\StockTradingApp\bin\Debug\net8.0\Entities.pdb

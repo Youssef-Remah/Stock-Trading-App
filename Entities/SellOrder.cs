@@ -50,7 +50,7 @@ namespace Entities
         /// The price of each stock (share)
         /// </summary>
         [Display(Name = "price")]
-        [Range(1, 100000, ErrorMessage = "The maximum {0} of stock is {2}. Minimum is {1}.")]
+        [Range(1, 10000, ErrorMessage = "The maximum {0} of stock is {2}. Minimum is {1}.")]
         public double Price { get; set; }
     }
 }

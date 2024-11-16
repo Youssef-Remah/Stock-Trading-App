@@ -1,0 +1,12 @@
+D:\Dot-Net-Projects\StockTradingApp\Entities\bin\Debug\net8.0\Entities.deps.json
+D:\Dot-Net-Projects\StockTradingApp\Entities\bin\Debug\net8.0\Entities.dll
+D:\Dot-Net-Projects\StockTradingApp\Entities\bin\Debug\net8.0\Entities.pdb
+D:\Dot-Net-Projects\StockTradingApp\Entities\obj\Debug\net8.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dot-Net-Projects\StockTradingApp\Entities\obj\Debug\net8.0\Entities.AssemblyInfoInputs.cache
+D:\Dot-Net-Projects\StockTradingApp\Entities\obj\Debug\net8.0\Entities.AssemblyInfo.cs
+D:\Dot-Net-Projects\StockTradingApp\Entities\obj\Debug\net8.0\Entities.csproj.CoreCompileInputs.cache
+D:\Dot-Net-Projects\StockTradingApp\Entities\obj\Debug\net8.0\Entities.sourcelink.json
+D:\Dot-Net-Projects\StockTradingApp\Entities\obj\Debug\net8.0\Entities.dll
+D:\Dot-Net-Projects\StockTradingApp\Entities\obj\Debug\net8.0\refint\Entities.dll
+D:\Dot-Net-Projects\StockTradingApp\Entities\obj\Debug\net8.0\Entities.pdb
+D:\Dot-Net-Projects\StockTradingApp\Entities\obj\Debug\net8.0\ref\Entities.dll
