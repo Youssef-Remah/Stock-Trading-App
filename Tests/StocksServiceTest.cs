@@ -1,5 +1,6 @@
 ﻿using ServiceContracts.DTO;
 using Services;
+using System.Runtime.InteropServices;
 using Xunit;
 
 namespace Tests
@@ -15,36 +16,40 @@ namespace Tests
         }
 
 
-        private BuyOrderRequest CreateDefaultBuyOrderRequest()
+        private BuyOrderRequest CreateDefaultBuyOrderRequest([Optional] string? stockName,
+            [Optional]  string? stockSymbol, [Optional] DateTime? dateAndTimeOfOrder,
+            [Optional] uint? quantity, [Optional] double? price)
         {
             return new()
             {
-                StockName = "Microsoft",
+                StockName = stockName ?? "Microsoft",
 
-                StockSymbol = "MSFT",
+                StockSymbol = stockSymbol ?? "MSFT",
 
-                DateAndTimeOfOrder = Convert.ToDateTime("2024-11-16"),
+                DateAndTimeOfOrder = dateAndTimeOfOrder ?? Convert.ToDateTime("2024-11-16"),
 
-                Quantity = 500,
+                Quantity = quantity ?? 500,
 
-                Price = 500,
+                Price = price ?? 500
             };
         }
 
 
-        private SellOrderRequest CreateDefaultSellOrderRequest()
+        private SellOrderRequest CreateDefaultSellOrderRequest([Optional] string? stockName,
+            [Optional] string? stockSymbol, [Optional] DateTime? dateAndTimeOfOrder,
+            [Optional] uint? quantity, [Optional] double? price)
         {
             return new()
             {
-                StockSymbol = "MSFT",
+                StockName = stockName ?? "Microsoft",
 
-                StockName = "Microsoft",
+                StockSymbol = stockSymbol ?? "MSFT",
 
-                DateAndTimeOfOrder = Convert.ToDateTime("2024-11-16"),
+                DateAndTimeOfOrder = dateAndTimeOfOrder ?? Convert.ToDateTime("2024-11-16"),
 
-                Price = 500,
+                Quantity = quantity ?? 500,
 
-                Quantity = 500,
+                Price = price ?? 500
             };
         }
 
@@ -76,9 +81,7 @@ namespace Tests
         {
             //Arrange
 
-            BuyOrderRequest buyOrderRequest = CreateDefaultBuyOrderRequest();
-
-            buyOrderRequest.Quantity = quantity;
+            BuyOrderRequest buyOrderRequest = CreateDefaultBuyOrderRequest(quantity: quantity);
 
 
             //Assert
@@ -97,9 +100,7 @@ namespace Tests
         {
             //Arrange
 
-            BuyOrderRequest buyOrderRequest = CreateDefaultBuyOrderRequest();
-
-            buyOrderRequest.Quantity = quantity;
+            BuyOrderRequest buyOrderRequest = CreateDefaultBuyOrderRequest(quantity: quantity);
 
 
             //Assert
@@ -118,9 +119,7 @@ namespace Tests
         {
             //Arrange
 
-            BuyOrderRequest buyOrderRequest = CreateDefaultBuyOrderRequest();
-
-            buyOrderRequest.Price = price;
+            BuyOrderRequest buyOrderRequest = CreateDefaultBuyOrderRequest(price: price);
 
 
             //Assert
@@ -139,9 +138,7 @@ namespace Tests
         {
             //Arrange
 
-            BuyOrderRequest buyOrderRequest = CreateDefaultBuyOrderRequest();
-
-            buyOrderRequest.Price = price;
+            BuyOrderRequest buyOrderRequest = CreateDefaultBuyOrderRequest(price: price);
 
 
             //Assert
@@ -180,9 +177,8 @@ namespace Tests
         {
             //Arrange
 
-            BuyOrderRequest buyOrderRequest = CreateDefaultBuyOrderRequest();
-
-            buyOrderRequest.DateAndTimeOfOrder = Convert.ToDateTime(orderDate);
+            BuyOrderRequest buyOrderRequest = CreateDefaultBuyOrderRequest(dateAndTimeOfOrder: 
+                Convert.ToDateTime(orderDate));
 
 
             //Assert
@@ -243,9 +239,7 @@ namespace Tests
         {
             //Arrange
 
-            SellOrderRequest sellOrderRequest = CreateDefaultSellOrderRequest();
-
-            sellOrderRequest.Quantity = quantity;
+            SellOrderRequest sellOrderRequest = CreateDefaultSellOrderRequest(quantity: quantity);
 
 
             //Assert
@@ -259,13 +253,11 @@ namespace Tests
         // If Quantity is greater than the maximum (100,000), throws ArgumentException
         [Theory]
         [InlineData(100001)]
-        public async Task CreateSellOrder_QuantityIsGreaterThanMinimum(uint quantity)
+        public async Task CreateSellOrder_QuantityIsGreaterThanMaximum(uint quantity)
         {
             //Arrange
 
-            SellOrderRequest sellOrderRequest = CreateDefaultSellOrderRequest();
-
-            sellOrderRequest.Quantity = quantity;
+            SellOrderRequest sellOrderRequest = CreateDefaultSellOrderRequest(quantity: quantity);
 
 
             //Assert
@@ -284,9 +276,7 @@ namespace Tests
         {
             //Arrange
 
-            SellOrderRequest sellOrderRequest = CreateDefaultSellOrderRequest();
-
-            sellOrderRequest.Price = price;
+            SellOrderRequest sellOrderRequest = CreateDefaultSellOrderRequest(price: price);
 
 
             //Assert
@@ -305,9 +295,7 @@ namespace Tests
         {
             //Arrange
 
-            SellOrderRequest sellOrderRequest = CreateDefaultSellOrderRequest();
-
-            sellOrderRequest.Price = price;
+            SellOrderRequest sellOrderRequest = CreateDefaultSellOrderRequest(price: price);
 
 
             //Assert
@@ -346,9 +334,8 @@ namespace Tests
         {
             //Arrange
 
-            SellOrderRequest sellOrderRequest = CreateDefaultSellOrderRequest();
-
-            sellOrderRequest.DateAndTimeOfOrder = Convert.ToDateTime(orderDate);
+            SellOrderRequest sellOrderRequest = CreateDefaultSellOrderRequest(dateAndTimeOfOrder: 
+                Convert.ToDateTime(orderDate));
 
 
             //Assert
@@ -380,5 +367,116 @@ namespace Tests
 
         #endregion
 
+
+        #region GetBuyOrders
+
+        // By default when GetBuyOrders() get called, it should return an empty list
+        [Fact]
+        public async Task GetBuyOrders_EmptyList()
+        {
+            //Act
+
+            List<BuyOrderResponse> buyOrdersList = await _stocksService.GetBuyOrders();
+
+
+            //Assert
+
+            Assert.Empty(buyOrdersList);
+        }
+
+
+        // When some BuyOrder items are added using CreateBuyOrder(),
+        // the returned list from GetBuyOrders() should contain all the recently added items
+        [Fact]
+        public async Task GetBuyOrders_ValidData_ToBeSuccessful()
+        {
+            //Arrange
+
+            BuyOrderRequest buyOrderRequest1 = CreateDefaultBuyOrderRequest();
+
+            BuyOrderRequest buyOrderRequest2 = CreateDefaultBuyOrderRequest(stockName: "Apple", stockSymbol: "AAPL");
+
+
+            List<BuyOrderRequest> buyOrderRequests = new() { buyOrderRequest1, buyOrderRequest2 };
+
+            List<BuyOrderResponse> buyOrderResponses = new();
+
+
+            foreach (BuyOrderRequest req in buyOrderRequests)
+            {
+                buyOrderResponses.Add(await _stocksService.CreateBuyOrder(req));
+            }
+
+
+            //Act
+
+            List<BuyOrderResponse> buyOrderResponses_FromGet = await _stocksService.GetBuyOrders();
+
+
+            //Assert
+
+            foreach (BuyOrderResponse res in buyOrderResponses)
+            {
+                Assert.Contains(res, buyOrderResponses_FromGet);
+            }
+        }
+
+        #endregion
+
+
+        #region GetSellOrders
+
+        // By default when GetSellOrders() get called, it should return an empty list
+        [Fact]
+        public async Task GetSellOrders_EmptyList()
+        {
+            //Act
+
+            List<SellOrderResponse> sellOrdersList = await _stocksService.GetSellOrders();
+
+
+            //Assert
+
+            Assert.Empty(sellOrdersList);
+        }
+
+
+        // When some SellOrder items are added using CreateSellOrder(),
+        // the returned list from GetSellOrders() should contain all the recently added items
+        [Fact]
+        public async Task GetSellOrders_ValidData_ToBeSuccessful()
+        {
+            //Arrange
+
+            SellOrderRequest sellOrderRequest1 = CreateDefaultSellOrderRequest();
+
+            SellOrderRequest sellOrderRequest2 = CreateDefaultSellOrderRequest(stockName: "Apple", stockSymbol: "AAPL");
+
+
+            List<SellOrderRequest> sellOrderRequests = new() { sellOrderRequest1, sellOrderRequest2 };
+
+            List<SellOrderResponse> sellOrderResponses = new();
+
+
+            foreach (SellOrderRequest req in sellOrderRequests)
+            {
+                sellOrderResponses.Add(await _stocksService.CreateSellOrder(req));
+            }
+
+
+            //Act
+
+            List<SellOrderResponse> sellOrderResponses_FromGet = await _stocksService.GetSellOrders();
+
+
+            //Assert
+
+            foreach (SellOrderResponse res in sellOrderResponses)
+            {
+                Assert.Contains(res, sellOrderResponses_FromGet);
+            }
+        }
+
+        #endregion
     }
 }
