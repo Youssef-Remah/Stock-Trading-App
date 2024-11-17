@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\Dot-Net-Projects\\StockTradingApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{632A886E-255A-48D4-9714-AD3809735DB7}|Tests\\Tests.csproj|d:\\dot-net-projects\\stocktradingapp\\tests\\stocksservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{632A886E-255A-48D4-9714-AD3809735DB7}|Tests\\Tests.csproj|solutionrelative:tests\\stocksservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C533B9CC-DE86-430E-AD1D-2B078AF8388B}|Services\\Services.csproj|d:\\dot-net-projects\\stocktradingapp\\services\\stocksservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C533B9CC-DE86-430E-AD1D-2B078AF8388B}|Services\\Services.csproj|solutionrelative:services\\stocksservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{632A886E-255A-48D4-9714-AD3809735DB7}|Tests\\Tests.csproj|d:\\dot-net-projects\\stocktradingapp\\tests\\stocksservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{632A886E-255A-48D4-9714-AD3809735DB7}|Tests\\Tests.csproj|solutionrelative:tests\\stocksservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{239DA3EB-7D2D-4766-A351-2488E2D360F3}|StockTradingApp\\StockTradingApp.csproj|d:\\dot-net-projects\\stocktradingapp\\stocktradingapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -22,32 +22,33 @@
       "DocumentGroups": [
         {
           "DockedWidth": 471,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "StocksServiceTest.cs",
               "DocumentMoniker": "D:\\Dot-Net-Projects\\StockTradingApp\\Tests\\StocksServiceTest.cs",
               "RelativeDocumentMoniker": "Tests\\StocksServiceTest.cs",
               "ToolTip": "D:\\Dot-Net-Projects\\StockTradingApp\\Tests\\StocksServiceTest.cs",
               "RelativeToolTip": "Tests\\StocksServiceTest.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAYwCMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAANUAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T13:14:46.234Z",
+              "WhenOpened": "2024-11-17T10:45:40.718Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "StocksService.cs",
               "DocumentMoniker": "D:\\Dot-Net-Projects\\StockTradingApp\\Services\\StocksService.cs",
               "RelativeDocumentMoniker": "Services\\StocksService.cs",
               "ToolTip": "D:\\Dot-Net-Projects\\StockTradingApp\\Services\\StocksService.cs",
               "RelativeToolTip": "Services\\StocksService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE0AAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T10:54:22.351Z"
+              "WhenOpened": "2024-11-16T10:54:22.351Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
