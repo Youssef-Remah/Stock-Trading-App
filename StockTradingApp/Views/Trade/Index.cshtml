@@ -1,8 +1,20 @@
 ﻿@model StockTrade
 
 @{
-	ViewBag.Title = "Trading";
+    ViewBag.Title = "Trading";
+
+    ViewBag.CurrentUrl = "~/Trade/Index";
 }
+
+<div class="text-grey ml">
+
+    <span>Stocks</span>
+
+    <i class="fa-solid fa-caret-right"></i>
+
+    <span>@Model.StockName</span>
+
+</div>
 
 <form method="post">
 
@@ -13,20 +25,78 @@
        <div id="stock-price-panel">
 
             <div class="stock">
+
                  <h1 class="stock-title">@Model.StockName (@Model.StockSymbol)</h1>
 
                  <h2 class="stock-price">
+
                      <small class="text-grey">$</small>
              
                      <span class="price">@Model.Price.ToString("N")</span>
+
                  </h2>
+
             </div>
 
-        <div class="date"></div>
+            <div class="date"></div>
 
-   </div>
+        </div>
 
-  </div>
+        <div class="new-order-panel">
+
+            <div class="flex flex-direction-vertical">
+
+                <h3 class="text-grey mb">New Order</h3>
+
+                <label for="Quantity" class="mt">Quantity:</label>
+
+                <div class="w-40">
+                    <input id="Quantity" type="number" name="Quantity" value="@Model.Quantity"
+                            placeholder="Quantity" min="1" max="100000" required="required"
+                            autofocus="autofocus" class="form-input mb" />
+                </div>
+
+            </div>
+
+            <div class="button-panel">
+
+                <button type="submit" formaction="~/Trade/SellOrder" class="button button-red-back trading-button sell-button">
+
+                    <i class="fa-solid fa-arrow-up"></i>
+
+                    <span>Sell</span>
+
+                </button>
+
+                <button type="submit" formaction="~/Trade/BuyOrder" class="button button-green-back trading-button buy-button">
+
+                    <i class="fa-solid fa-arrow-down"></i>
+
+                    <span>Buy</span>
+
+                </button>
+
+                @if (ViewBag.Errors != null)
+                {
+                        <div class="text-red mt">
+
+                            <ul>
+
+                                @foreach (string error in ViewBag.Errors)
+                                {
+                                    <li class="ml">@error</li>
+                                }
+
+                        </ul>
+
+                    </div>
+                }
+
+            </div>
+
+        </div>
+        
+  </div>  
 
  </div>
 
