@@ -11,7 +11,9 @@ builder.Services.Configure<TradingOptions>(
 	builder.Configuration.GetSection("TradingOptions")
 );
 
-builder.Services.AddScoped<IFinnhubService, FinnhubService>();
+builder.Services.AddSingleton<IFinnhubService, FinnhubService>();
+
+builder.Services.AddSingleton<IStocksService, StocksService>();
 
 builder.Services.AddHttpClient();
 

@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using ServiceContracts;
+using ServiceContracts.DTO;
 using StockTradingApp.Models;
 
 namespace StockTradingApp.Controllers
@@ -15,13 +16,17 @@ namespace StockTradingApp.Controllers
 
 		private readonly IFinnhubService _finnhubService;
 
+		private readonly IStocksService _stocksService;
+
 
 		public TradeController(
 			IConfiguration configuration,
 
 			IOptions<TradingOptions> tradingOptions,
 
-			IFinnhubService finnhubService
+			IFinnhubService finnhubService,
+
+			IStocksService stocksService
 		)
 		{
 			_configuration = configuration;
@@ -29,7 +34,10 @@ namespace StockTradingApp.Controllers
 			_tradingOptions = tradingOptions.Value;
 
 			_finnhubService = finnhubService;
+
+			_stocksService = stocksService;
 		}
+
 
 		[HttpGet]
 		[Route("/")]
@@ -68,6 +76,101 @@ namespace StockTradingApp.Controllers
 
 
 			return View(stockTrade);
+		}
+
+
+		[HttpPost]
+		[Route("[action]")]
+		public async Task<IActionResult> BuyOrder(BuyOrderRequest buyOrderRequest)
+		{
+			buyOrderRequest.DateAndTimeOfOrder = DateTime.Now;
+
+			ModelState.Clear();
+
+			if (!TryValidateModel(buyOrderRequest))
+			{
+				List<string> errorMessages = new();
+
+
+				errorMessages = ModelState.Values
+										  .SelectMany(value => value.Errors)
+										  .Select(error => error.ErrorMessage)
+										  .ToList();
+
+				StockTrade stockTrade = new() 
+				{
+					StockSymbol = buyOrderRequest.StockSymbol,
+
+					StockName = buyOrderRequest.StockName,
+
+					Price = buyOrderRequest.Price,
+
+					Quantity = buyOrderRequest.Quantity
+				};
+
+				return View("Index", stockTrade);
+			}
+
+			BuyOrderResponse buyOrderResponse = await _stocksService.CreateBuyOrder(buyOrderRequest);
+
+			return RedirectToAction(nameof(Orders));
+		}
+
+
+		[HttpPost]
+		[Route("[action]")]
+		public async Task<IActionResult> SellOrder(SellOrderRequest sellOrderRequest)
+		{
+			sellOrderRequest.DateAndTimeOfOrder = DateTime.Now;
+
+			ModelState.Clear();
+
+			if (!TryValidateModel(sellOrderRequest))
+			{
+				ViewBag.Errors = ModelState.Values
+						  .SelectMany(value => value.Errors)
+						  .Select(error => error.ErrorMessage);
+
+				StockTrade stockTrade = new()
+				{
+					StockName = sellOrderRequest.StockName,
+
+					Price = sellOrderRequest.Price,
+
+					Quantity = sellOrderRequest.Quantity,
+
+					StockSymbol = sellOrderRequest.StockSymbol
+				};
+
+				return View("Index", stockTrade);
+			}
+
+			SellOrderResponse sellOrderResponse = await _stocksService.CreateSellOrder(sellOrderRequest);
+
+			return RedirectToAction(nameof(Orders));
+		}
+
+
+		[HttpGet]
+		[Route("[action]")]
+		public async Task<IActionResult> Orders()
+		{
+			List<BuyOrderResponse> buyOrderResponses = await _stocksService.GetBuyOrders();
+
+			List<SellOrderResponse> sellOrderResponses = await _stocksService.GetSellOrders();
+
+
+			Models.Orders orders = new()
+			{
+				BuyOrders = buyOrderResponses,
+
+				SellOrders = sellOrderResponses
+			};
+
+			ViewBag.TradingOptions = _tradingOptions;
+
+
+			return View(orders);
 		}
 	}
 }

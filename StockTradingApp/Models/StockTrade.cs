@@ -1,5 +1,8 @@
 ﻿namespace StockTradingApp.Models
 {
+	/// <summary>
+	/// Represents the view model class to supply trade details to Trade/Index view
+	/// </summary>
 	public class StockTrade
 	{
 		public string? StockSymbol { get; set; }
