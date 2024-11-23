@@ -92,7 +92,7 @@ namespace StockTradingApp.Controllers
 				List<string> errorMessages = new();
 
 
-				errorMessages = ModelState.Values
+                ViewBag.Errors = errorMessages = ModelState.Values
 										  .SelectMany(value => value.Errors)
 										  .Select(error => error.ErrorMessage)
 										  .ToList();
