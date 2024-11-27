@@ -53,20 +53,20 @@
                     <ul>
                         @if (ViewBag.CurrentUrl == "~/Trade/Index")
                         {
-                            <li><a href="~/Trade/Index" class="nav-active">Trade</a></li>
+                            <li><a asp-controller="Trade" asp-action="Index" class="nav-active">Trade</a></li>
                         }
                         else
                         {
-                            <li><a href="~/Trade/Index">Trade</a></li>
+                            <li><a asp-controller="Trade" asp-action="Index">Trade</a></li>
                         }
 
                         @if (ViewBag.CurrentUrl == "~/Trade/Orders")
                         {
-                            <li><a href="~/Trade/Orders" class="nav-active">Orders</a></li>
+                            <li><a asp-controller="Trade" asp-action="Orders" class="nav-active">Orders</a></li>
                         }
                         else
                         {
-                            <li><a href="~/Trade/Orders">Orders</a></li>
+                            <li><a asp-controller="Trade" asp-action="Orders">Orders</a></li>
                         }
 
                     </ul>
