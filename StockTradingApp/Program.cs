@@ -1,3 +1,5 @@
+using Entities;
+using Microsoft.EntityFrameworkCore;
 using ServiceContracts;
 using Services;
 using StockTradingApp;
@@ -17,6 +19,9 @@ builder.Services.AddSingleton<IStocksService, StocksService>();
 
 builder.Services.AddHttpClient();
 
+builder.Services.AddDbContext<StockMarketDbContext>(options => {
+	options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+});
 
 var app = builder.Build();
 

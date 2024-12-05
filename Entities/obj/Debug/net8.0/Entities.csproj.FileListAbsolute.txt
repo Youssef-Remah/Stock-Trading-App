@@ -10,3 +10,6 @@ D:\Dot-Net-Projects\StockTradingApp\Entities\obj\Debug\net8.0\Entities.dll
 D:\Dot-Net-Projects\StockTradingApp\Entities\obj\Debug\net8.0\refint\Entities.dll
 D:\Dot-Net-Projects\StockTradingApp\Entities\obj\Debug\net8.0\Entities.pdb
 D:\Dot-Net-Projects\StockTradingApp\Entities\obj\Debug\net8.0\ref\Entities.dll
+D:\Dot-Net-Projects\StockTradingApp\Entities\bin\Debug\net8.0\Entities.runtimeconfig.json
+D:\Dot-Net-Projects\StockTradingApp\Entities\obj\Debug\net8.0\Entities.csproj.AssemblyReference.cache
+D:\Dot-Net-Projects\StockTradingApp\Entities\obj\Debug\net8.0\Entities.genruntimeconfig.cache
