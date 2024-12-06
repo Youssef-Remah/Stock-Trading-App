@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Zua9TEWupNTOcZLPhskz9go2A7AghHsiGoTgY332oAo=",
+  "Hash": "UuPw9Z/uZTxy2TL4ThcwvC1x/aVAkzYzFzqotPu5Owo=",
   "Source": "StockTradingApp",
   "BasePath": "_content/StockTradingApp",
   "Mode": "Default",
@@ -16,6 +16,25 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "D:\\Dot-Net-Projects\\StockTradingApp\\StockTradingApp\\wwwroot\\Rotativa\\wkhtmltopdf.exe",
+      "SourceId": "StockTradingApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Dot-Net-Projects\\StockTradingApp\\StockTradingApp\\wwwroot\\",
+      "BasePath": "_content/StockTradingApp",
+      "RelativePath": "Rotativa/wkhtmltopdf.exe",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Rotativa\\wkhtmltopdf.exe"
+    },
     {
       "Identity": "D:\\Dot-Net-Projects\\StockTradingApp\\StockTradingApp\\wwwroot\\Scripts\\FinnhubScript.js",
       "SourceId": "StockTradingApp",

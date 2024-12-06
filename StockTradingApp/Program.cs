@@ -23,6 +23,8 @@ builder.Services.AddDbContext<StockMarketDbContext>(options => {
 	options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
+Rotativa.AspNetCore.RotativaConfiguration.Setup("wwwroot", wkhtmltopdfRelativePath: "Rotativa");
+
 var app = builder.Build();
 
 

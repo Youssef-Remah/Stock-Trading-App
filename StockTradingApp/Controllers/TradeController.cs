@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
+using Rotativa.AspNetCore;
 using ServiceContracts;
 using ServiceContracts.DTO;
 using StockTradingApp.Models;
@@ -171,6 +173,31 @@ namespace StockTradingApp.Controllers
 
 
 			return View(orders);
+		}
+
+
+		[HttpGet]
+		[Route("[action]")]
+		public async Task<IActionResult> OrdersPDF()
+		{
+			Models.Orders orders = new();
+
+			orders.BuyOrders = await _stocksService.GetBuyOrders();
+
+			orders.SellOrders = await _stocksService.GetSellOrders();
+
+			return new ViewAsPdf(orders)
+			{
+				PageMargins = new Rotativa.AspNetCore.Options.Margins()
+				{
+					Top = 20,
+					Right = 20,
+					Bottom = 20,
+					Left = 20,
+				},
+
+				PageOrientation = Rotativa.AspNetCore.Options.Orientation.Landscape
+			};
 		}
 	}
 }
