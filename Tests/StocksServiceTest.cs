@@ -12,7 +12,7 @@ namespace Tests
 
         public StocksServiceTest()
         {
-            _stocksService = new();
+            _stocksService = new(null);
         }
 
 
