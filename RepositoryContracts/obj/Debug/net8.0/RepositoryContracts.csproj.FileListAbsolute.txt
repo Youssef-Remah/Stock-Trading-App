@@ -1,0 +1,16 @@
+D:\Dot-Net-Projects\StockTradingApp\RepositoryContracts\bin\Debug\net8.0\RepositoryContracts.deps.json
+D:\Dot-Net-Projects\StockTradingApp\RepositoryContracts\bin\Debug\net8.0\RepositoryContracts.dll
+D:\Dot-Net-Projects\StockTradingApp\RepositoryContracts\bin\Debug\net8.0\RepositoryContracts.pdb
+D:\Dot-Net-Projects\StockTradingApp\RepositoryContracts\bin\Debug\net8.0\Entities.dll
+D:\Dot-Net-Projects\StockTradingApp\RepositoryContracts\bin\Debug\net8.0\Entities.pdb
+D:\Dot-Net-Projects\StockTradingApp\RepositoryContracts\obj\Debug\net8.0\RepositoryContracts.csproj.AssemblyReference.cache
+D:\Dot-Net-Projects\StockTradingApp\RepositoryContracts\obj\Debug\net8.0\RepositoryContracts.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dot-Net-Projects\StockTradingApp\RepositoryContracts\obj\Debug\net8.0\RepositoryContracts.AssemblyInfoInputs.cache
+D:\Dot-Net-Projects\StockTradingApp\RepositoryContracts\obj\Debug\net8.0\RepositoryContracts.AssemblyInfo.cs
+D:\Dot-Net-Projects\StockTradingApp\RepositoryContracts\obj\Debug\net8.0\RepositoryContracts.csproj.CoreCompileInputs.cache
+D:\Dot-Net-Projects\StockTradingApp\RepositoryContracts\obj\Debug\net8.0\RepositoryContracts.sourcelink.json
+D:\Dot-Net-Projects\StockTradingApp\RepositoryContracts\obj\Debug\net8.0\Reposito.28D4BA81.Up2Date
+D:\Dot-Net-Projects\StockTradingApp\RepositoryContracts\obj\Debug\net8.0\RepositoryContracts.dll
+D:\Dot-Net-Projects\StockTradingApp\RepositoryContracts\obj\Debug\net8.0\refint\RepositoryContracts.dll
+D:\Dot-Net-Projects\StockTradingApp\RepositoryContracts\obj\Debug\net8.0\RepositoryContracts.pdb
+D:\Dot-Net-Projects\StockTradingApp\RepositoryContracts\obj\Debug\net8.0\ref\RepositoryContracts.dll
