@@ -10,7 +10,7 @@
 		/// </summary>
 		/// <param name="stockSymbol">Stock symbol to search for</param>
 		/// <returns>Returns a dictionary that contains company details</returns>
-		Task<Dictionary<string, object>?> GetCompanyProfile(string stockSymbol);
+		public Task<Dictionary<string, object>?> GetCompanyProfile(string stockSymbol);
 
 
 		/// <summary>
@@ -18,6 +18,21 @@
 		/// </summary>
 		/// <param name="stockSymbol">Stock symbol to search for</param>
 		/// <returns>Returns a dictionary that contains stock price details</returns>
-		Task<Dictionary<string, object>?> GetStockPriceQuote(string stockSymbol);
-	}
+		public Task<Dictionary<string, object>?> GetStockPriceQuote(string stockSymbol);
+
+
+        /// <summary>
+        /// Returns list of all stocks supported by an exchange (default: US)
+        /// </summary>
+        /// <returns>List of stocks</returns>
+        public Task<List<Dictionary<string, string>>?> GetStocks();
+
+
+        /// <summary>
+        /// Returns list of matching stocks based on the given stock symbol
+        /// </summary>
+        /// <param name="stockSymbolToSearch">Stock symbol to search</param>
+        /// <returns>List of matching stocks</returns>
+        public Task<Dictionary<string, object>?> SearchStocks(string stockSymbolToSearch);
+    }
 }
