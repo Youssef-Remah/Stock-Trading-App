@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 using ServiceContracts;
 using StockTradingApp.Models;
 
@@ -15,12 +16,12 @@ namespace StockTradingApp.Controllers
 
 
         public StocksController(
-            TradingOptions tradingOptions,
+            IOptions<TradingOptions> tradingOptions,
             IFinnhubService finnhubService,
             IStocksService stocksService
         )
         {
-            _tradingOptions = tradingOptions;
+            _tradingOptions = tradingOptions.Value;
 
             _finnhubService = finnhubService;
 
@@ -36,27 +37,24 @@ namespace StockTradingApp.Controllers
         {
             List<Dictionary<string, string>>? stocksDictionary = await _finnhubService.GetStocks();
 
-            List<Stock> stocks = new();
+            List<Stock> stocks = new List<Stock>();
 
             if (stocksDictionary is not null)
-            {
-                if (!showAll && _tradingOptions.Top25PopularStocks is not null)
+            {              
+                if (!showAll && _tradingOptions.Top25PopularStocks != null)
                 {
-                    string[]? top25PopularStocks = _tradingOptions.Top25PopularStocks.Split(',');
-
-                    if(top25PopularStocks is not null)
+                    string[]? Top25PopularStocksList = _tradingOptions.Top25PopularStocks.Split(",");
+                    if (Top25PopularStocksList is not null)
                     {
-                        stocksDictionary = stocksDictionary.Where(
-                            stock => top25PopularStocks.Contains(stock["symbol"])).ToList();
+                        stocksDictionary = stocksDictionary
+                         .Where(temp => Top25PopularStocksList.Contains(Convert.ToString(temp["symbol"])))
+                         .ToList();
                     }
                 }
-
-                stocks = stocksDictionary.Select(
-                stock => new Stock()
-                {
-                    StockName = Convert.ToString(stock["description"]),
-                    StockSymbol = Convert.ToString(stock["symbol"])
-                }).ToList();
+                
+                stocks = stocksDictionary
+                 .Select(temp => new Stock() { StockName = Convert.ToString(temp["description"]), StockSymbol = Convert.ToString(temp["symbol"]) })
+                .ToList();
             }
 
             ViewBag.stock = stock;

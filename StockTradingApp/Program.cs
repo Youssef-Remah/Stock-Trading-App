@@ -1,5 +1,7 @@
 using Entities;
 using Microsoft.EntityFrameworkCore;
+using Repositories;
+using RepositoryContracts;
 using ServiceContracts;
 using Services;
 using StockTradingApp;
@@ -17,6 +19,10 @@ builder.Services.AddTransient<IFinnhubService, FinnhubService>();
 
 builder.Services.AddTransient<IStocksService, StocksService>();
 
+builder.Services.AddTransient<IFinnhubRepository, FinnhubRepository>();
+
+builder.Services.AddTransient<IStocksRepository, StocksRepository>();
+	
 builder.Services.AddHttpClient();
 
 builder.Services.AddDbContext<StockMarketDbContext>(options => {

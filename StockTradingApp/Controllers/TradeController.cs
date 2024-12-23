@@ -42,40 +42,33 @@ namespace StockTradingApp.Controllers
 
 
 		[HttpGet]
-		[Route("/")]
-		[Route("[action]")]
-		[Route("~/[controller]")]
-		public async Task<IActionResult> Index()
+		[Route("[action]/{stockSymbol}")]
+		[Route("~/[controller]/{stockSymbol}")]
+		public async Task<IActionResult> Index(string stockSymbol)
 		{
-			//set the default stock symbol if doesn't exist
-			if(string.IsNullOrEmpty(_tradingOptions.DefaultStockSymbol))
-				_tradingOptions.DefaultStockSymbol = "MSFT";
+			//reset stock symbol if not exists
+			if (string.IsNullOrEmpty(stockSymbol))
+				stockSymbol = "MSFT";
+
 
 			//get company profile from API server
-			Dictionary<string, object>? companyProfileDictionary;
-
-			companyProfileDictionary = await _finnhubService.GetCompanyProfile(_tradingOptions.DefaultStockSymbol);
-
+			Dictionary<string, object>? companyProfileDictionary = await _finnhubService.GetCompanyProfile(stockSymbol);
 
 			//get stock price quotes from API server
-			Dictionary<string, object>? stockQuoteDictionary;
-
-			stockQuoteDictionary = await _finnhubService.GetStockPriceQuote(_tradingOptions.DefaultStockSymbol);
+			Dictionary<string, object>? stockQuoteDictionary = await _finnhubService.GetStockPriceQuote(stockSymbol);
 
 
-			StockTrade stockTrade = new() { StockSymbol = _tradingOptions.DefaultStockSymbol };
+			//create model object
+			StockTrade stockTrade = new StockTrade() { StockSymbol = stockSymbol };
 
-			if (companyProfileDictionary is not null && stockQuoteDictionary is not null)
+			//load data from finnHubService into model object
+			if (companyProfileDictionary != null && stockQuoteDictionary != null)
 			{
-				stockTrade.StockSymbol = companyProfileDictionary["ticker"].ToString();
-
-				stockTrade.StockName = companyProfileDictionary["name"].ToString();
-
-				stockTrade.Price = Convert.ToDouble(stockQuoteDictionary["c"].ToString());
+				stockTrade = new StockTrade() { StockSymbol = companyProfileDictionary["ticker"].ToString(), StockName = companyProfileDictionary["name"].ToString(), Quantity = _tradingOptions.DefaultOrderQuantity ?? 0, Price = Convert.ToDouble(stockQuoteDictionary["c"].ToString()) };
 			}
 
+			//Send Finnhub token to view
 			ViewBag.FinnhubToken = _configuration["FinnhubToken"];
-
 
 			return View(stockTrade);
 		}

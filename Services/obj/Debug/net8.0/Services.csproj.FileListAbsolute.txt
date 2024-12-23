@@ -16,3 +16,7 @@ D:\Dot-Net-Projects\StockTradingApp\Services\obj\Debug\net8.0\Services.pdb
 D:\Dot-Net-Projects\StockTradingApp\Services\obj\Debug\net8.0\ref\Services.dll
 D:\Dot-Net-Projects\StockTradingApp\Services\bin\Debug\net8.0\Entities.dll
 D:\Dot-Net-Projects\StockTradingApp\Services\bin\Debug\net8.0\Entities.pdb
+D:\Dot-Net-Projects\StockTradingApp\Services\bin\Debug\net8.0\Repositories.dll
+D:\Dot-Net-Projects\StockTradingApp\Services\bin\Debug\net8.0\RepositoryContracts.dll
+D:\Dot-Net-Projects\StockTradingApp\Services\bin\Debug\net8.0\Repositories.pdb
+D:\Dot-Net-Projects\StockTradingApp\Services\bin\Debug\net8.0\RepositoryContracts.pdb

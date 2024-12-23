@@ -179,3 +179,7 @@ D:\Dot-Net-Projects\StockTradingApp\StockTradingApp\bin\Debug\net8.0\zh-Hans\Mic
 D:\Dot-Net-Projects\StockTradingApp\StockTradingApp\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 D:\Dot-Net-Projects\StockTradingApp\StockTradingApp\bin\Debug\net8.0\Rotativa.AspNetCore.dll
 D:\Dot-Net-Projects\StockTradingApp\StockTradingApp\obj\Debug\net8.0\StockTradingApp.MvcApplicationPartsAssemblyInfo.cs
+D:\Dot-Net-Projects\StockTradingApp\StockTradingApp\bin\Debug\net8.0\Repositories.dll
+D:\Dot-Net-Projects\StockTradingApp\StockTradingApp\bin\Debug\net8.0\RepositoryContracts.dll
+D:\Dot-Net-Projects\StockTradingApp\StockTradingApp\bin\Debug\net8.0\Repositories.pdb
+D:\Dot-Net-Projects\StockTradingApp\StockTradingApp\bin\Debug\net8.0\RepositoryContracts.pdb
