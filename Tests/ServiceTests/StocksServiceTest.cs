@@ -73,6 +73,7 @@ namespace Tests.ServiceTests
 
 
         #region CreateBuyOrder
+
         // If BuyOrderRequest is null, throw ArgumentNullException
         [Fact]
         public async Task CreateBuyOrder_NullBuyOrder_ToBeArgumentNullException()
@@ -269,6 +270,7 @@ namespace Tests.ServiceTests
 
             buyOrderResponse.Should().Be(buyOrder.ToBuyOrderResponse());
         }
+
         #endregion
 
 
@@ -276,140 +278,175 @@ namespace Tests.ServiceTests
 
         // If SellOrderRequest is null, throws ArgumentNullException
         [Fact]
-        public async Task CreateSellOrder_NullSellOrder()
+        public async Task CreateSellOrder_NullSellOrder_ToBeArgumentNullException()
         {
             //Arrange
-
             SellOrderRequest? sellOrderRequest = null;
 
+            SellOrder sellOrderFixture = _fixture.Build<SellOrder>().Create();
 
-            //Assert
-            await Assert.ThrowsAsync<ArgumentNullException>(() =>
+            //Mock
+            _stocksRepositoryMock.Setup(func => func.CreateSellOrder(It.IsAny<SellOrder>()))
+                                                    .ReturnsAsync(sellOrderFixture);
+
+            //Act
+            Func<Task<SellOrderResponse>> action = async () =>
             {
-                //Act
-                return _stocksService.CreateSellOrder(sellOrderRequest);
-            });
+                return await _stocksService.CreateSellOrder(sellOrderRequest);
+            };
+            
+            //Assert
+            await action.Should().ThrowAsync<ArgumentNullException>();
         }
 
 
         // If Quantity is less than minimum (1), throws ArgumentException
         [Theory]
         [InlineData(0)]
-        public async Task CreateSellOrder_QuantityIsLessThanMinimum(uint quantity)
+        public async Task CreateSellOrder_QuantityIsLessThanMinimum_ToBeArgumentException(uint quantity)
         {
             //Arrange
+            SellOrderRequest sellOrderRequest = _fixture.Build<SellOrderRequest>()
+                                                        .With(p => p.Quantity, quantity)
+                                                        .Create();
 
-            SellOrderRequest sellOrderRequest = CreateDefaultSellOrderRequest(quantity: quantity);
+            //Mock
+            _stocksRepositoryMock.Setup(func => func.CreateSellOrder(It.IsAny<SellOrder>()))
+                                                    .ReturnsAsync(sellOrderRequest.ToSellOrder());
 
+            //Act
+            Func<Task<SellOrderResponse>> action = async () =>
+            {
+                return await _stocksService.CreateSellOrder(sellOrderRequest);
+            };
 
             //Assert
-            await Assert.ThrowsAsync<ArgumentException>(() =>
-            {
-                //Act
-                return _stocksService.CreateSellOrder(sellOrderRequest);
-            });
+            await action.Should().ThrowAsync<ArgumentException>();
         }
 
 
         // If Quantity is greater than the maximum (100,000), throws ArgumentException
         [Theory]
         [InlineData(100001)]
-        public async Task CreateSellOrder_QuantityIsGreaterThanMaximum(uint quantity)
+        public async Task CreateSellOrder_QuantityIsGreaterThanMaximum_ToBeArgumentException(uint quantity)
         {
             //Arrange
+            SellOrderRequest sellOrderRequest = _fixture.Build<SellOrderRequest>()
+                                                        .With(p => p.Quantity, quantity)
+                                                        .Create();
 
-            SellOrderRequest sellOrderRequest = CreateDefaultSellOrderRequest(quantity: quantity);
+            //Mock
+            _stocksRepositoryMock.Setup(func => func.CreateSellOrder(It.IsAny<SellOrder>()))
+                                                    .ReturnsAsync(sellOrderRequest.ToSellOrder());
 
+            //Act
+            Func<Task<SellOrderResponse>> action = async () =>
+            {
+                return await _stocksService.CreateSellOrder(sellOrderRequest);
+            };
 
             //Assert
-
-            await Assert.ThrowsAsync<ArgumentException>(() =>
-            {
-                //Act
-                return _stocksService.CreateSellOrder(sellOrderRequest);
-            });
+            await action.Should().ThrowAsync<ArgumentException>();
         }
 
 
         // If Price is less than minimum (1), throws ArgumentException
         [Theory]
         [InlineData(0)]
-        public async Task CreateSellOrder_PriceIsLessThanMinimum(double price)
+        public async Task CreateSellOrder_PriceIsLessThanMinimum_ToBeArgumentException(double price)
         {
             //Arrange
 
-            SellOrderRequest sellOrderRequest = CreateDefaultSellOrderRequest(price: price);
+            SellOrderRequest sellOrderRequest = _fixture.Build<SellOrderRequest>()
+                                                        .With(p => p.Price, price)
+                                                        .Create();
 
+            //Mock
+            _stocksRepositoryMock.Setup(func => func.CreateSellOrder(It.IsAny<SellOrder>()))
+                                                    .ReturnsAsync(sellOrderRequest.ToSellOrder());
+
+            //Act
+            Func<Task<SellOrderResponse>> action = async () =>
+            {
+                return await _stocksService.CreateSellOrder(sellOrderRequest);
+            };
 
             //Assert
-
-            await Assert.ThrowsAsync<ArgumentException>(() =>
-            {
-                //Act
-                return _stocksService.CreateSellOrder(sellOrderRequest);
-            });
+            await action.Should().ThrowAsync<ArgumentException>();
         }
 
 
         // If Price is greater than maximum (10,000), throws ArgumentException
         [Theory]
         [InlineData(10001)]
-        public async Task CreateSellOrder_PriceIsGreaterThanMaximum(double price)
+        public async Task CreateSellOrder_PriceIsGreaterThanMaximum_ToBeArgumentException(double price)
         {
             //Arrange
+            SellOrderRequest sellOrderRequest = _fixture.Build<SellOrderRequest>()
+                                                        .With(p => p.Price, price)
+                                                        .Create();
 
-            SellOrderRequest sellOrderRequest = CreateDefaultSellOrderRequest(price: price);
+            //Mock
+            _stocksRepositoryMock.Setup(func => func.CreateSellOrder(It.IsAny<SellOrder>()))
+                                                    .ReturnsAsync(sellOrderRequest.ToSellOrder());
 
+            //Act
+            Func<Task<SellOrderResponse>> action = async () =>
+            {
+                return await _stocksService.CreateSellOrder(sellOrderRequest);
+            };
 
             //Assert
-
-            await Assert.ThrowsAsync<ArgumentException>(() =>
-            {
-                //Act
-                return _stocksService.CreateSellOrder(sellOrderRequest);
-            });
+            await action.Should().ThrowAsync<ArgumentException>();
         }
 
 
         // If StockSymbol is null, throws ArgumentException
         [Fact]
-        public async Task CreateSellOrder_StockSymbolIsNull()
+        public async Task CreateSellOrder_StockSymbolIsNull_ToBeArgumentException()
         {
             //Arrange
+            SellOrderRequest sellOrderRequest = _fixture.Build<SellOrderRequest>()
+                                                        .With(p => p.StockSymbol, null as string)
+                                                        .Create();
 
-            SellOrderRequest sellOrderRequest = CreateDefaultSellOrderRequest();
+            //Mock
+            _stocksRepositoryMock.Setup(func => func.CreateSellOrder(It.IsAny<SellOrder>()))
+                                                    .ReturnsAsync(sellOrderRequest.ToSellOrder());
 
-            sellOrderRequest.StockSymbol = null;
-
+            //Act
+            Func<Task<SellOrderResponse>> action = async () =>
+            {
+                return await _stocksService.CreateSellOrder(sellOrderRequest);
+            };
 
             //Assert
-
-            await Assert.ThrowsAsync<ArgumentException>(() =>
-            {
-                //Act
-                return _stocksService.CreateSellOrder(sellOrderRequest);
-            });
+            await action.Should().ThrowAsync<ArgumentException>();
         }
 
 
         // If DateAndTimeOfOrder is less than minimum year (2000), throws ArgumentException
         [Theory]
         [InlineData("1999-12-31")]
-        public async Task CreateSellOrder_DateOfOrderIsLessThanMinimumYear(string orderDate)
+        public async Task CreateSellOrder_DateOfOrderIsLessThanMinimumYear_ToBeArgumentException(string orderDate)
         {
             //Arrange
+            SellOrderRequest sellOrderRequest = _fixture.Build<SellOrderRequest>()
+                                                        .With(p => p.DateAndTimeOfOrder, Convert.ToDateTime(orderDate))
+                                                        .Create();
 
-            SellOrderRequest sellOrderRequest = CreateDefaultSellOrderRequest(dateAndTimeOfOrder:
-                Convert.ToDateTime(orderDate));
+            //Mock
+            _stocksRepositoryMock.Setup(func => func.CreateSellOrder(It.IsAny<SellOrder>()))
+                                                    .ReturnsAsync(sellOrderRequest.ToSellOrder());
 
+            //Act
+            Func<Task<SellOrderResponse>> action = async () =>
+            {
+                return await _stocksService.CreateSellOrder(sellOrderRequest);
+            };
 
             //Assert
-
-            await Assert.ThrowsAsync<ArgumentException>(() =>
-            {
-                //Act
-                return _stocksService.CreateSellOrder(sellOrderRequest);
-            });
+            await action.Should().ThrowAsync<ArgumentException>();
         }
 
 
@@ -419,16 +456,23 @@ namespace Tests.ServiceTests
         public async Task CreateSellOrder_ValidData_ToBeSuccessful()
         {
             //Arrange
+            SellOrderRequest sellOrderRequest = _fixture.Build<SellOrderRequest>().Create();
 
-            SellOrderRequest sellOrderRequest = CreateDefaultSellOrderRequest();
+            SellOrder sellOrder = sellOrderRequest.ToSellOrder();
 
+            //Mock
+            _stocksRepositoryMock.Setup(func => func.CreateSellOrder(It.IsAny<SellOrder>()))
+                                                    .ReturnsAsync(sellOrder);
 
             //Act
             SellOrderResponse sellOrderResponse = await _stocksService.CreateSellOrder(sellOrderRequest);
 
-
             //Assert
-            Assert.NotEqual(Guid.Empty, sellOrderResponse.SellOrderID);
+            sellOrder.SellOrderID = sellOrderResponse.SellOrderID;
+
+            sellOrderResponse.SellOrderID.Should().NotBe(Guid.Empty);
+
+            sellOrderResponse.Should().Be(sellOrder.ToSellOrderResponse());
         }
 
         #endregion
