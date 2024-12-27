@@ -482,14 +482,13 @@ namespace Tests.ServiceTests
 
         // By default when GetBuyOrders() get called, it should return an empty list
         [Fact]
-        public async Task GetBuyOrders_EmptyList_ToBeEmpty()
+        public async Task GetBuyOrders_EmptyList()
         {
             //Mock
             _stocksRepositoryMock.Setup(func => func.GetBuyOrders()).ReturnsAsync(new List<BuyOrder>());
 
             //Act
             List<BuyOrderResponse> buyOrdersList = await _stocksService.GetBuyOrders();
-
 
             //Assert
             buyOrdersList.Should().BeEmpty();
@@ -506,7 +505,7 @@ namespace Tests.ServiceTests
             {
                 _fixture.Build<BuyOrder>().Create(),
 
-                _fixture.Build<BuyOrder>().Create(),
+                _fixture.Build<BuyOrder>().Create()
             };
 
             List<BuyOrderResponse> buyOrderResponses = buyOrders.Select(buyOrder => buyOrder.ToBuyOrderResponse())
@@ -517,7 +516,6 @@ namespace Tests.ServiceTests
 
             //Act
             List<BuyOrderResponse> buyOrderResponses_FromGet = await _stocksService.GetBuyOrders();
-
 
             //Assert
             buyOrderResponses_FromGet.Should().BeEquivalentTo(buyOrderResponses);
@@ -532,14 +530,14 @@ namespace Tests.ServiceTests
         [Fact]
         public async Task GetSellOrders_EmptyList()
         {
-            //Act
+            //Mock
+            _stocksRepositoryMock.Setup(func => func.GetSellOrders()).ReturnsAsync(new List<SellOrder>());
 
+            //Act
             List<SellOrderResponse> sellOrdersList = await _stocksService.GetSellOrders();
 
-
             //Assert
-
-            Assert.Empty(sellOrdersList);
+            sellOrdersList.Should().BeEmpty();
         }
 
 
@@ -549,34 +547,23 @@ namespace Tests.ServiceTests
         public async Task GetSellOrders_ValidData_ToBeSuccessful()
         {
             //Arrange
-
-            SellOrderRequest sellOrderRequest1 = CreateDefaultSellOrderRequest();
-
-            SellOrderRequest sellOrderRequest2 = CreateDefaultSellOrderRequest(stockName: "Apple", stockSymbol: "AAPL");
-
-
-            List<SellOrderRequest> sellOrderRequests = new() { sellOrderRequest1, sellOrderRequest2 };
-
-            List<SellOrderResponse> sellOrderResponses = new();
-
-
-            foreach (SellOrderRequest req in sellOrderRequests)
+            List<SellOrder> sellOrders = new()
             {
-                sellOrderResponses.Add(await _stocksService.CreateSellOrder(req));
-            }
+                _fixture.Build<SellOrder>().Create(),
+                _fixture.Build<SellOrder>().Create()
+            };
 
+            List<SellOrderResponse> sellOrderResponses = sellOrders.Select(sellOrder => sellOrder.ToSellOrderResponse())
+                                                                   .ToList();
+
+            //Mock
+            _stocksRepositoryMock.Setup(func => func.GetSellOrders()).ReturnsAsync(sellOrders);
 
             //Act
-
             List<SellOrderResponse> sellOrderResponses_FromGet = await _stocksService.GetSellOrders();
 
-
             //Assert
-
-            foreach (SellOrderResponse res in sellOrderResponses)
-            {
-                Assert.Contains(res, sellOrderResponses_FromGet);
-            }
+            sellOrderResponses_FromGet.Should().BeEquivalentTo(sellOrderResponses);
         }
 
         #endregion
