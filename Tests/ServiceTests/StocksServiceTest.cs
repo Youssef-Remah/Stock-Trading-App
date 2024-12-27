@@ -482,16 +482,17 @@ namespace Tests.ServiceTests
 
         // By default when GetBuyOrders() get called, it should return an empty list
         [Fact]
-        public async Task GetBuyOrders_EmptyList()
+        public async Task GetBuyOrders_EmptyList_ToBeEmpty()
         {
-            //Act
+            //Mock
+            _stocksRepositoryMock.Setup(func => func.GetBuyOrders()).ReturnsAsync(new List<BuyOrder>());
 
+            //Act
             List<BuyOrderResponse> buyOrdersList = await _stocksService.GetBuyOrders();
 
 
             //Assert
-
-            Assert.Empty(buyOrdersList);
+            buyOrdersList.Should().BeEmpty();
         }
 
 
@@ -501,34 +502,25 @@ namespace Tests.ServiceTests
         public async Task GetBuyOrders_ValidData_ToBeSuccessful()
         {
             //Arrange
-
-            BuyOrderRequest buyOrderRequest1 = CreateDefaultBuyOrderRequest();
-
-            BuyOrderRequest buyOrderRequest2 = CreateDefaultBuyOrderRequest(stockName: "Apple", stockSymbol: "AAPL");
-
-
-            List<BuyOrderRequest> buyOrderRequests = new() { buyOrderRequest1, buyOrderRequest2 };
-
-            List<BuyOrderResponse> buyOrderResponses = new();
-
-
-            foreach (BuyOrderRequest req in buyOrderRequests)
+            List<BuyOrder> buyOrders = new()
             {
-                buyOrderResponses.Add(await _stocksService.CreateBuyOrder(req));
-            }
+                _fixture.Build<BuyOrder>().Create(),
 
+                _fixture.Build<BuyOrder>().Create(),
+            };
+
+            List<BuyOrderResponse> buyOrderResponses = buyOrders.Select(buyOrder => buyOrder.ToBuyOrderResponse())
+                                                                .ToList();
+
+            //Mock
+            _stocksRepositoryMock.Setup(func => func.GetBuyOrders()).ReturnsAsync(buyOrders);
 
             //Act
-
             List<BuyOrderResponse> buyOrderResponses_FromGet = await _stocksService.GetBuyOrders();
 
 
             //Assert
-
-            foreach (BuyOrderResponse res in buyOrderResponses)
-            {
-                Assert.Contains(res, buyOrderResponses_FromGet);
-            }
+            buyOrderResponses_FromGet.Should().BeEquivalentTo(buyOrderResponses);
         }
 
         #endregion
