@@ -1143,6 +1143,18 @@
           "lib/netstandard2.0/NuGet.Frameworks.dll": {}
         }
       },
+      "Rotativa.AspNetCore/1.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Rotativa.AspNetCore.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/Rotativa.AspNetCore.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
         "type": "package",
         "runtimeTargets": {
@@ -2946,6 +2958,24 @@
         "runtime": {
           "bin/placeholder/Services.dll": {}
         }
+      },
+      "StockTradingApp/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Rotativa.AspNetCore": "1.4.0",
+          "ServiceContracts": "1.0.0",
+          "Services": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/StockTradingApp.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/StockTradingApp.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
@@ -4484,6 +4514,24 @@
         "lib/netstandard2.0/NuGet.Frameworks.dll",
         "nuget.frameworks.6.5.0.nupkg.sha512",
         "nuget.frameworks.nuspec"
+      ]
+    },
+    "Rotativa.AspNetCore/1.4.0": {
+      "sha512": "zn0KgqCQqiTuNPYgeqrIJxXafjJUfDJBcUJIhAV5NgWSCX3DOEeg339zMJTbzcCyoJgGPL5LrG+IKZ3k8/Uk9Q==",
+      "type": "package",
+      "path": "rotativa.aspnetcore/1.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net5.0/Rotativa.AspNetCore.dll",
+        "lib/net6.0/Rotativa.AspNetCore.dll",
+        "lib/net7.0/Rotativa.AspNetCore.dll",
+        "lib/net8.0/Rotativa.AspNetCore.dll",
+        "lib/netcoreapp3.1/Rotativa.AspNetCore.dll",
+        "lib/netstandard2.0/Rotativa.AspNetCore.dll",
+        "rotativa.aspnetcore.1.4.0.nupkg.sha512",
+        "rotativa.aspnetcore.nuspec"
       ]
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
@@ -8738,6 +8786,11 @@
       "type": "project",
       "path": "../Services/Services.csproj",
       "msbuildProject": "../Services/Services.csproj"
+    },
+    "StockTradingApp/1.0.0": {
+      "type": "project",
+      "path": "../StockTradingApp/StockTradingApp.csproj",
+      "msbuildProject": "../StockTradingApp/StockTradingApp.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -8750,6 +8803,7 @@
       "RepositoryContracts >= 1.0.0",
       "ServiceContracts >= 1.0.0",
       "Services >= 1.0.0",
+      "StockTradingApp >= 1.0.0",
       "coverlet.collector >= 6.0.0",
       "xunit >= 2.5.3",
       "xunit.runner.visualstudio >= 2.5.3"
@@ -8794,6 +8848,9 @@
             },
             "D:\\Dot-Net-Projects\\StockTradingApp\\Services\\Services.csproj": {
               "projectPath": "D:\\Dot-Net-Projects\\StockTradingApp\\Services\\Services.csproj"
+            },
+            "D:\\Dot-Net-Projects\\StockTradingApp\\StockTradingApp\\StockTradingApp.csproj": {
+              "projectPath": "D:\\Dot-Net-Projects\\StockTradingApp\\StockTradingApp\\StockTradingApp.csproj"
             }
           }
         }

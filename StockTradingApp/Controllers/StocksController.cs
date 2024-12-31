@@ -12,20 +12,15 @@ namespace StockTradingApp.Controllers
 
         private readonly IFinnhubService _finnhubService;
 
-        private readonly IStocksService _stocksService;
-
 
         public StocksController(
             IOptions<TradingOptions> tradingOptions,
-            IFinnhubService finnhubService,
-            IStocksService stocksService
+            IFinnhubService finnhubService
         )
         {
             _tradingOptions = tradingOptions.Value;
 
             _finnhubService = finnhubService;
-
-            _stocksService = stocksService;
         }
 
 

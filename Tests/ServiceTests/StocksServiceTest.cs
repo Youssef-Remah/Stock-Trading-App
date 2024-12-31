@@ -4,7 +4,6 @@ using RepositoryContracts;
 using ServiceContracts;
 using ServiceContracts.DTO;
 using Services;
-using System.Runtime.InteropServices;
 using Xunit;
 using FluentAssertions;
 using Entities;
@@ -31,44 +30,6 @@ namespace Tests.ServiceTests
             _stocksService = new StocksService(_stocksRepository);
 
             _fixture = new Fixture();
-        }
-
-
-        private BuyOrderRequest CreateDefaultBuyOrderRequest([Optional] string? stockName,
-            [Optional] string? stockSymbol, [Optional] DateTime? dateAndTimeOfOrder,
-            [Optional] uint? quantity, [Optional] double? price)
-        {
-            return new()
-            {
-                StockName = stockName ?? "Microsoft",
-
-                StockSymbol = stockSymbol ?? "MSFT",
-
-                DateAndTimeOfOrder = dateAndTimeOfOrder ?? Convert.ToDateTime("2024-11-16"),
-
-                Quantity = quantity ?? 500,
-
-                Price = price ?? 500
-            };
-        }
-
-
-        private SellOrderRequest CreateDefaultSellOrderRequest([Optional] string? stockName,
-            [Optional] string? stockSymbol, [Optional] DateTime? dateAndTimeOfOrder,
-            [Optional] uint? quantity, [Optional] double? price)
-        {
-            return new()
-            {
-                StockName = stockName ?? "Microsoft",
-
-                StockSymbol = stockSymbol ?? "MSFT",
-
-                DateAndTimeOfOrder = dateAndTimeOfOrder ?? Convert.ToDateTime("2024-11-16"),
-
-                Quantity = quantity ?? 500,
-
-                Price = price ?? 500
-            };
         }
 
 
