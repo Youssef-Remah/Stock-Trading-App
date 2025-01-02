@@ -1,0 +1,8 @@
+{
+  "Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Dot-Net-Projects\\StockTradingApp\\Entities",
+  "Repositories, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Dot-Net-Projects\\StockTradingApp\\Repositories",
+  "RepositoryContracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Dot-Net-Projects\\StockTradingApp\\RepositoryContracts",
+  "ServiceContracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Dot-Net-Projects\\StockTradingApp\\ServiceContracts",
+  "Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Dot-Net-Projects\\StockTradingApp\\Services",
+  "StockTradingApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Dot-Net-Projects\\StockTradingApp\\StockTradingApp"
+}
