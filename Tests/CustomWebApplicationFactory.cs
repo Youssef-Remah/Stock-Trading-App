@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Tests
@@ -14,6 +15,12 @@ namespace Tests
 
             //Set Environment for Testing
             builder.UseEnvironment("Test");
+
+            builder.ConfigureAppConfiguration((context, config) =>
+            {
+                //Ensure user secrets are included in the configuration pipeline
+                config.AddUserSecrets<Program>();
+            });
 
             //Configure Services before building the application
             builder.ConfigureServices(services =>

@@ -29,10 +29,17 @@ builder.Services.AddDbContext<StockMarketDbContext>(options => {
 	options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
-Rotativa.AspNetCore.RotativaConfiguration.Setup("wwwroot", wkhtmltopdfRelativePath: "Rotativa");
-
 var app = builder.Build();
 
+if (builder.Environment.IsDevelopment())
+{
+    app.UseDeveloperExceptionPage();
+}
+
+if (!builder.Environment.IsEnvironment("Test"))
+{
+    Rotativa.AspNetCore.RotativaConfiguration.Setup("wwwroot", wkhtmltopdfRelativePath: "Rotativa");
+}
 
 //Middleware Pipline
 app.UseStaticFiles();
