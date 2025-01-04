@@ -12,6 +12,8 @@ The Stock Trading App is an **ASP.NET Core 8 web application** that displays rea
 
 - **Unit Testing:** Comprehensive tests using xUnit to ensure application reliability.
 
+- **Integration Testing:** Integration tests to verify end-to-end functionality and ensure proper functioning of all components.
+
 ## Technologies Used
 
 - **ASP.NET Core 8:** Framework for building the web application.
