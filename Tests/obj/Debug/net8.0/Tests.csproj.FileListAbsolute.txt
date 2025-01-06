@@ -487,3 +487,13 @@ D:\Dot-Net-Projects\StockTradingApp\Tests\bin\Debug\net8.0\System.Diagnostics.Ev
 D:\Dot-Net-Projects\StockTradingApp\Tests\bin\Debug\net8.0\System.Xml.XPath.XmlDocument.dll
 D:\Dot-Net-Projects\StockTradingApp\Tests\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
 D:\Dot-Net-Projects\StockTradingApp\Tests\obj\Debug\net8.0\MvcTestingAppManifest.json
+D:\Dot-Net-Projects\StockTradingApp\Tests\bin\Debug\net8.0\Serilog.dll
+D:\Dot-Net-Projects\StockTradingApp\Tests\bin\Debug\net8.0\Serilog.AspNetCore.dll
+D:\Dot-Net-Projects\StockTradingApp\Tests\bin\Debug\net8.0\Serilog.Extensions.Hosting.dll
+D:\Dot-Net-Projects\StockTradingApp\Tests\bin\Debug\net8.0\Serilog.Extensions.Logging.dll
+D:\Dot-Net-Projects\StockTradingApp\Tests\bin\Debug\net8.0\Serilog.Formatting.Compact.dll
+D:\Dot-Net-Projects\StockTradingApp\Tests\bin\Debug\net8.0\Serilog.Settings.Configuration.dll
+D:\Dot-Net-Projects\StockTradingApp\Tests\bin\Debug\net8.0\Serilog.Sinks.Console.dll
+D:\Dot-Net-Projects\StockTradingApp\Tests\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
+D:\Dot-Net-Projects\StockTradingApp\Tests\bin\Debug\net8.0\Serilog.Sinks.File.dll
+D:\Dot-Net-Projects\StockTradingApp\Tests\bin\Debug\net8.0\Serilog.Sinks.Seq.dll

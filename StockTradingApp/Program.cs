@@ -1,12 +1,23 @@
 using Entities;
+using Microsoft.AspNetCore.HttpLogging;
 using Microsoft.EntityFrameworkCore;
 using Repositories;
 using RepositoryContracts;
+using Serilog;
 using ServiceContracts;
 using Services;
 using StockTradingApp;
 
 var builder = WebApplication.CreateBuilder(args);
+
+//Serilog
+builder.Host.UseSerilog(
+	(HostBuilderContext context, IServiceProvider services, LoggerConfiguration loggerConfiguration) =>
+	{
+		loggerConfiguration.ReadFrom.Configuration(context.Configuration) //read configuration settings from built-in IConfiguration
+                           .ReadFrom.Services(services); //read out current app's services and make them available to serilog
+    }
+);
 
 //Services
 builder.Services.AddControllersWithViews();
@@ -29,6 +40,11 @@ builder.Services.AddDbContext<StockMarketDbContext>(options => {
 	options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
+builder.Services.AddHttpLogging(options =>
+{
+    options.LoggingFields = HttpLoggingFields.RequestProperties | HttpLoggingFields.ResponsePropertiesAndHeaders;
+});
+
 var app = builder.Build();
 
 if (builder.Environment.IsDevelopment())
@@ -42,6 +58,10 @@ if (!builder.Environment.IsEnvironment("Test"))
 }
 
 //Middleware Pipline
+app.UseSerilogRequestLogging();
+
+app.UseHttpLogging();
+
 app.UseStaticFiles();
 
 app.UseRouting();

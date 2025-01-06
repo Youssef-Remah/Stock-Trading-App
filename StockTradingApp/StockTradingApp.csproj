@@ -13,6 +13,9 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Rotativa.AspNetCore" Version="1.4.0" />
+    <PackageReference Include="Serilog" Version="4.2.0" />
+    <PackageReference Include="Serilog.AspNetCore" Version="8.0.3" />
+    <PackageReference Include="Serilog.Sinks.Seq" Version="8.0.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -21,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-	<InternalsVisibleTo Include="Tests"/>
+	<InternalsVisibleTo Include="Tests" />
   </ItemGroup>
 
 </Project>

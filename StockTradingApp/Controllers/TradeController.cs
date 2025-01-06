@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
-using Microsoft.IdentityModel.Tokens;
 using Rotativa.AspNetCore;
 using ServiceContracts;
 using ServiceContracts.DTO;
@@ -20,6 +19,8 @@ namespace StockTradingApp.Controllers
 
 		private readonly IStocksService _stocksService;
 
+		private readonly ILogger<TradeController> _logger;
+
 
 		public TradeController(
 			IConfiguration configuration,
@@ -28,8 +29,10 @@ namespace StockTradingApp.Controllers
 
 			IFinnhubService finnhubService,
 
-			IStocksService stocksService
-		)
+			IStocksService stocksService,
+
+            ILogger<TradeController> logger
+        )
 		{
 			_configuration = configuration;
 
@@ -38,6 +41,8 @@ namespace StockTradingApp.Controllers
 			_finnhubService = finnhubService;
 
 			_stocksService = stocksService;
+
+			_logger = logger;
 		}
 
 
@@ -46,6 +51,11 @@ namespace StockTradingApp.Controllers
 		[Route("~/[controller]/{stockSymbol}")]
 		public async Task<IActionResult> Index(string stockSymbol)
 		{
+			_logger.LogInformation("In {ControllerName}.{ActionMethodName}() action method",
+				nameof(TradeController), nameof(Index));
+
+			_logger.LogDebug("StockSymbol: {stockSymbol}", stockSymbol);
+
 			//reset stock symbol if not exists
 			if (string.IsNullOrEmpty(stockSymbol))
 				stockSymbol = "MSFT";
