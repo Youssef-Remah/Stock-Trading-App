@@ -1276,7 +1276,8 @@
         "dependencies": {
           "Entities": "1.0.0",
           "Microsoft.Extensions.Http": "9.0.0",
-          "RepositoryContracts": "1.0.0"
+          "RepositoryContracts": "1.0.0",
+          "Serilog.Extensions.Hosting": "8.0.0"
         },
         "runtime": {
           "Repositories.dll": {
