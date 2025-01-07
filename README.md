@@ -1,6 +1,6 @@
 # Stock Trading App
 
-The Stock Trading App is an **ASP.NET Core 8 web application** that displays real-time stock prices using data from Finnhub.io. It fetches and displays real-time stock prices using the Finnhub.io API, providing a user-friendly interface to view market data. The app is designed with the **MVC architecture**, follows the **repository pattern** for data management, and includes **unit tests** to ensure reliability. The application uses **SQL Server** for data storage and **Entity Framework Core** for database operations, and includes logging capabilities to monitor and debug the application effectively.
+The Stock Trading App is an **ASP.NET Core 8 web application** that displays real-time stock prices using data from Finnhub.io. It fetches and displays real-time stock prices using the Finnhub.io API, providing a user-friendly interface to view market data. The app is designed with the **MVC architecture**, follows the **repository pattern** for data management, and includes **unit tests** to ensure reliability. The application uses **SQL Server** for data storage and **Entity Framework Core** for database operations, and includes **logging capabilities** to monitor and debug the application effectively.
 
 ## Features
 
