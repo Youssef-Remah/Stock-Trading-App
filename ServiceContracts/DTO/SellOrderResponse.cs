@@ -6,7 +6,7 @@ namespace ServiceContracts.DTO
     /// <summary>
     /// DTO class that represents a sell order - that can be used as a return type of Stocks Service
     /// </summary>
-    public class SellOrderResponse
+    public class SellOrderResponse: IOrderResponse
     {
         /// <summary>
         /// The unique ID of the sell order
@@ -52,6 +52,9 @@ namespace ServiceContracts.DTO
 
 
         public double TradeAmount { get; set; }
+
+
+        public OrderType TypeOfOrder => OrderType.SellOrder;
 
 
         /// <summary>

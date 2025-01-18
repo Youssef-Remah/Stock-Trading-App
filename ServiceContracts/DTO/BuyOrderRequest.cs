@@ -6,7 +6,7 @@ namespace ServiceContracts.DTO
     /// <summary>
     /// DTO class representing a buy order to purchase the stocks - that can be used while inserting / updating
     /// </summary>
-    public class BuyOrderRequest : IValidatableObject
+    public class BuyOrderRequest : IValidatableObject, IOrderRequest
     {
         /// <summary>
         /// The unique symbol of the stock
