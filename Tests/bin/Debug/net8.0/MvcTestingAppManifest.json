@@ -1,5 +1,6 @@
 {
   "Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Dot-Net-Projects\\StockTradingApp\\Entities",
+  "Exceptions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Dot-Net-Projects\\StockTradingApp\\Exceptions",
   "Repositories, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Dot-Net-Projects\\StockTradingApp\\Repositories",
   "RepositoryContracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Dot-Net-Projects\\StockTradingApp\\RepositoryContracts",
   "ServiceContracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\Dot-Net-Projects\\StockTradingApp\\ServiceContracts",

@@ -193,3 +193,5 @@ D:\Dot-Net-Projects\StockTradingApp\StockTradingApp\bin\Debug\net8.0\Serilog.Sin
 D:\Dot-Net-Projects\StockTradingApp\StockTradingApp\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
 D:\Dot-Net-Projects\StockTradingApp\StockTradingApp\bin\Debug\net8.0\Serilog.Sinks.File.dll
 D:\Dot-Net-Projects\StockTradingApp\StockTradingApp\bin\Debug\net8.0\Serilog.Sinks.Seq.dll
+D:\Dot-Net-Projects\StockTradingApp\StockTradingApp\bin\Debug\net8.0\Exceptions.dll
+D:\Dot-Net-Projects\StockTradingApp\StockTradingApp\bin\Debug\net8.0\Exceptions.pdb

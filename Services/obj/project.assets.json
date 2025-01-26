@@ -1244,6 +1244,16 @@
           "bin/placeholder/Entities.dll": {}
         }
       },
+      "Exceptions/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Exceptions.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Exceptions.dll": {}
+        }
+      },
       "Repositories/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -3393,6 +3403,11 @@
       "path": "../Entities/Entities.csproj",
       "msbuildProject": "../Entities/Entities.csproj"
     },
+    "Exceptions/1.0.0": {
+      "type": "project",
+      "path": "../Exceptions/Exceptions.csproj",
+      "msbuildProject": "../Exceptions/Exceptions.csproj"
+    },
     "Repositories/1.0.0": {
       "type": "project",
       "path": "../Repositories/Repositories.csproj",
@@ -3411,6 +3426,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "Exceptions >= 1.0.0",
       "Microsoft.Extensions.Configuration.Abstractions >= 9.0.0",
       "Microsoft.Extensions.Http >= 9.0.0",
       "Repositories >= 1.0.0",
@@ -3445,6 +3461,9 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
+            "D:\\Dot-Net-Projects\\StockTradingApp\\Exceptions\\Exceptions.csproj": {
+              "projectPath": "D:\\Dot-Net-Projects\\StockTradingApp\\Exceptions\\Exceptions.csproj"
+            },
             "D:\\Dot-Net-Projects\\StockTradingApp\\Repositories\\Repositories.csproj": {
               "projectPath": "D:\\Dot-Net-Projects\\StockTradingApp\\Repositories\\Repositories.csproj"
             },
