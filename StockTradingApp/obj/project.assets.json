@@ -5658,6 +5658,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "Exceptions >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 9.0.0",
       "Rotativa.AspNetCore >= 1.4.0",
       "Serilog >= 4.2.0",
@@ -5695,6 +5696,9 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
+            "D:\\Dot-Net-Projects\\StockTradingApp\\Exceptions\\Exceptions.csproj": {
+              "projectPath": "D:\\Dot-Net-Projects\\StockTradingApp\\Exceptions\\Exceptions.csproj"
+            },
             "D:\\Dot-Net-Projects\\StockTradingApp\\ServiceContracts\\ServiceContracts.csproj": {
               "projectPath": "D:\\Dot-Net-Projects\\StockTradingApp\\ServiceContracts\\ServiceContracts.csproj"
             },

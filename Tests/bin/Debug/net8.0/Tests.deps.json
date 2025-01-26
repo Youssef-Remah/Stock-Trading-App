@@ -2850,6 +2850,7 @@
       },
       "StockTradingApp/1.0.0": {
         "dependencies": {
+          "Exceptions": "1.0.0",
           "Rotativa.AspNetCore": "1.4.0",
           "Serilog": "4.2.0",
           "Serilog.AspNetCore": "8.0.3",

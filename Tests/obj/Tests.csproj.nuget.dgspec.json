@@ -452,6 +452,9 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+              "D:\\Dot-Net-Projects\\StockTradingApp\\Exceptions\\Exceptions.csproj": {
+                "projectPath": "D:\\Dot-Net-Projects\\StockTradingApp\\Exceptions\\Exceptions.csproj"
+              },
               "D:\\Dot-Net-Projects\\StockTradingApp\\ServiceContracts\\ServiceContracts.csproj": {
                 "projectPath": "D:\\Dot-Net-Projects\\StockTradingApp\\ServiceContracts\\ServiceContracts.csproj"
               },
