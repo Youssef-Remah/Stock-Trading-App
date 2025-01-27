@@ -7,6 +7,7 @@ using Serilog;
 using ServiceContracts;
 using Services;
 using StockTradingApp;
+using StockTradingApp.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -49,8 +50,13 @@ var app = builder.Build();
 
 if (builder.Environment.IsDevelopment())
 {
-    app.UseDeveloperExceptionPage();
+	app.UseDeveloperExceptionPage();
 }
+else
+{
+	app.UseMiddleware<ExceptionHandlingMiddleware>();
+}
+
 
 if (!builder.Environment.IsEnvironment("Test"))
 {
