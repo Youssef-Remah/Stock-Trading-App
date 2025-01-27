@@ -7,7 +7,7 @@ namespace StockTradingApp.Controllers
 	public class HomeController : Controller
 	{
 		[HttpGet]
-		[Route("[action]")]
+		[Route("Error")]
 		public IActionResult Error()
 		{
 			IExceptionHandlerPathFeature? exceptionHandlerPathFeature = 
@@ -16,12 +16,14 @@ namespace StockTradingApp.Controllers
 			if (exceptionHandlerPathFeature != null && exceptionHandlerPathFeature.Error != null)
 			{
 				Error error = new Error() { ErrorMessage = exceptionHandlerPathFeature.Error.Message };
+
 				return View(error);
 			}
 
 			else
 			{
 				Error error = new Error() { ErrorMessage = "Error encountered" };
+
 				return View(error);
 			}
 		}

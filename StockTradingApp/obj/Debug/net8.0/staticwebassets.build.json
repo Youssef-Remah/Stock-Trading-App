@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "UuPw9Z/uZTxy2TL4ThcwvC1x/aVAkzYzFzqotPu5Owo=",
+  "Hash": "+4SfyuLWYfN0seZ3Y5Tk0OdKgF7fwQAT7jB2U3vByM0=",
   "Source": "StockTradingApp",
   "BasePath": "_content/StockTradingApp",
   "Mode": "Default",
@@ -16,6 +16,25 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "D:\\Dot-Net-Projects\\StockTradingApp\\StockTradingApp\\wwwroot\\error.svg",
+      "SourceId": "StockTradingApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Dot-Net-Projects\\StockTradingApp\\StockTradingApp\\wwwroot\\",
+      "BasePath": "_content/StockTradingApp",
+      "RelativePath": "error.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\error.svg"
+    },
     {
       "Identity": "D:\\Dot-Net-Projects\\StockTradingApp\\StockTradingApp\\wwwroot\\Rotativa\\wkhtmltopdf.exe",
       "SourceId": "StockTradingApp",

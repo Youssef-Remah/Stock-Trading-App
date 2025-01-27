@@ -34,7 +34,9 @@ builder.Services.AddTransient<IStocksService, StocksService>();
 builder.Services.AddTransient<IFinnhubRepository, FinnhubRepository>();
 
 builder.Services.AddTransient<IStocksRepository, StocksRepository>();
-	
+
+builder.Services.AddTransient<ExceptionHandlingMiddleware>();
+
 builder.Services.AddHttpClient();
 
 builder.Services.AddDbContext<StockMarketDbContext>(options => {
@@ -54,6 +56,8 @@ if (builder.Environment.IsDevelopment())
 }
 else
 {
+	app.UseExceptionHandler("/Home/Error");
+
 	app.UseMiddleware<ExceptionHandlingMiddleware>();
 }
 
