@@ -195,3 +195,7 @@ D:\Dot-Net-Projects\StockTradingApp\StockTradingApp\bin\Debug\net8.0\Serilog.Sin
 D:\Dot-Net-Projects\StockTradingApp\StockTradingApp\bin\Debug\net8.0\Serilog.Sinks.Seq.dll
 D:\Dot-Net-Projects\StockTradingApp\StockTradingApp\bin\Debug\net8.0\Exceptions.dll
 D:\Dot-Net-Projects\StockTradingApp\StockTradingApp\bin\Debug\net8.0\Exceptions.pdb
+D:\Dot-Net-Projects\StockTradingApp\StockTradingApp\bin\Debug\net8.0\StockTradingApp.staticwebassets.endpoints.json
+D:\Dot-Net-Projects\StockTradingApp\StockTradingApp\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+D:\Dot-Net-Projects\StockTradingApp\StockTradingApp\obj\Debug\net8.0\staticwebassets\msbuild.StockTradingApp.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+D:\Dot-Net-Projects\StockTradingApp\StockTradingApp\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

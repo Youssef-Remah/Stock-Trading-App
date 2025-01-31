@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "+4SfyuLWYfN0seZ3Y5Tk0OdKgF7fwQAT7jB2U3vByM0=",
+  "Hash": "kXZjwbhjmVeRYiug0Mgvbcliz5xSGoLCOmsKt14eoEM=",
   "Source": "StockTradingApp",
   "BasePath": "_content/StockTradingApp",
   "Mode": "Default",
@@ -22,15 +22,17 @@
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Dot-Net-Projects\\StockTradingApp\\StockTradingApp\\wwwroot\\",
       "BasePath": "_content/StockTradingApp",
-      "RelativePath": "error.svg",
+      "RelativePath": "error#[.{fingerprint}]?.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "3iwubkh3iq",
+      "Integrity": "9XRmwQ0X13DL6FasTx/6HZ2cpKYSDQNLj7rqUngh3uU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\error.svg"
@@ -41,15 +43,17 @@
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Dot-Net-Projects\\StockTradingApp\\StockTradingApp\\wwwroot\\",
       "BasePath": "_content/StockTradingApp",
-      "RelativePath": "Rotativa/wkhtmltopdf.exe",
+      "RelativePath": "Rotativa/wkhtmltopdf#[.{fingerprint}]?.exe",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "cuquy3615b",
+      "Integrity": "ZNF2gjIL/9RbIgjtE7E21ZE56CVzdF8UVWzyXpXL2Ag=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Rotativa\\wkhtmltopdf.exe"
@@ -60,15 +64,17 @@
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Dot-Net-Projects\\StockTradingApp\\StockTradingApp\\wwwroot\\",
       "BasePath": "_content/StockTradingApp",
-      "RelativePath": "Scripts/FinnhubScript.js",
+      "RelativePath": "Scripts/FinnhubScript#[.{fingerprint}]?.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "3ll3r4thnw",
+      "Integrity": "ByvvXtdXmostbc0SmwaOJkJfJWRKj0dp9b9OzUScOYQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Scripts\\FinnhubScript.js"
@@ -79,18 +85,350 @@
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Dot-Net-Projects\\StockTradingApp\\StockTradingApp\\wwwroot\\",
       "BasePath": "_content/StockTradingApp",
-      "RelativePath": "StyleSheet.css",
+      "RelativePath": "StyleSheet#[.{fingerprint}]?.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "pvl4007qox",
+      "Integrity": "O8hEbekQTbLF7r12ZK9J9d59MO6V5szD7eb1aT+A9Jc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\StyleSheet.css"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "error.3iwubkh3iq.svg",
+      "AssetFile": "D:\\Dot-Net-Projects\\StockTradingApp\\StockTradingApp\\wwwroot\\error.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11753"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9XRmwQ0X13DL6FasTx/6HZ2cpKYSDQNLj7rqUngh3uU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 27 Jan 2025 09:03:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3iwubkh3iq"
+        },
+        {
+          "Name": "label",
+          "Value": "error.svg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-9XRmwQ0X13DL6FasTx/6HZ2cpKYSDQNLj7rqUngh3uU="
+        }
+      ]
+    },
+    {
+      "Route": "error.svg",
+      "AssetFile": "D:\\Dot-Net-Projects\\StockTradingApp\\StockTradingApp\\wwwroot\\error.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11753"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9XRmwQ0X13DL6FasTx/6HZ2cpKYSDQNLj7rqUngh3uU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 27 Jan 2025 09:03:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-9XRmwQ0X13DL6FasTx/6HZ2cpKYSDQNLj7rqUngh3uU="
+        }
+      ]
+    },
+    {
+      "Route": "Rotativa/wkhtmltopdf.cuquy3615b.exe",
+      "AssetFile": "D:\\Dot-Net-Projects\\StockTradingApp\\StockTradingApp\\wwwroot\\Rotativa\\wkhtmltopdf.exe",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "41563648"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/vnd.microsoft.portable-executable"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZNF2gjIL/9RbIgjtE7E21ZE56CVzdF8UVWzyXpXL2Ag=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 11 Jun 2020 00:24:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "cuquy3615b"
+        },
+        {
+          "Name": "label",
+          "Value": "Rotativa/wkhtmltopdf.exe"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZNF2gjIL/9RbIgjtE7E21ZE56CVzdF8UVWzyXpXL2Ag="
+        }
+      ]
+    },
+    {
+      "Route": "Rotativa/wkhtmltopdf.exe",
+      "AssetFile": "D:\\Dot-Net-Projects\\StockTradingApp\\StockTradingApp\\wwwroot\\Rotativa\\wkhtmltopdf.exe",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "41563648"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/vnd.microsoft.portable-executable"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZNF2gjIL/9RbIgjtE7E21ZE56CVzdF8UVWzyXpXL2Ag=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 11 Jun 2020 00:24:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZNF2gjIL/9RbIgjtE7E21ZE56CVzdF8UVWzyXpXL2Ag="
+        }
+      ]
+    },
+    {
+      "Route": "Scripts/FinnhubScript.3ll3r4thnw.js",
+      "AssetFile": "D:\\Dot-Net-Projects\\StockTradingApp\\StockTradingApp\\wwwroot\\Scripts\\FinnhubScript.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1814"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ByvvXtdXmostbc0SmwaOJkJfJWRKj0dp9b9OzUScOYQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 05 Nov 2024 14:47:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3ll3r4thnw"
+        },
+        {
+          "Name": "label",
+          "Value": "Scripts/FinnhubScript.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ByvvXtdXmostbc0SmwaOJkJfJWRKj0dp9b9OzUScOYQ="
+        }
+      ]
+    },
+    {
+      "Route": "Scripts/FinnhubScript.js",
+      "AssetFile": "D:\\Dot-Net-Projects\\StockTradingApp\\StockTradingApp\\wwwroot\\Scripts\\FinnhubScript.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1814"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ByvvXtdXmostbc0SmwaOJkJfJWRKj0dp9b9OzUScOYQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 05 Nov 2024 14:47:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ByvvXtdXmostbc0SmwaOJkJfJWRKj0dp9b9OzUScOYQ="
+        }
+      ]
+    },
+    {
+      "Route": "StyleSheet.css",
+      "AssetFile": "D:\\Dot-Net-Projects\\StockTradingApp\\StockTradingApp\\wwwroot\\StyleSheet.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8444"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"O8hEbekQTbLF7r12ZK9J9d59MO6V5szD7eb1aT+A9Jc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 15 Dec 2024 14:55:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-O8hEbekQTbLF7r12ZK9J9d59MO6V5szD7eb1aT+A9Jc="
+        }
+      ]
+    },
+    {
+      "Route": "StyleSheet.pvl4007qox.css",
+      "AssetFile": "D:\\Dot-Net-Projects\\StockTradingApp\\StockTradingApp\\wwwroot\\StyleSheet.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8444"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"O8hEbekQTbLF7r12ZK9J9d59MO6V5szD7eb1aT+A9Jc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 15 Dec 2024 14:55:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "pvl4007qox"
+        },
+        {
+          "Name": "label",
+          "Value": "StyleSheet.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-O8hEbekQTbLF7r12ZK9J9d59MO6V5szD7eb1aT+A9Jc="
+        }
+      ]
     }
   ]
 }

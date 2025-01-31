@@ -499,3 +499,4 @@ D:\Dot-Net-Projects\StockTradingApp\Tests\bin\Debug\net8.0\Serilog.Sinks.File.dl
 D:\Dot-Net-Projects\StockTradingApp\Tests\bin\Debug\net8.0\Serilog.Sinks.Seq.dll
 D:\Dot-Net-Projects\StockTradingApp\Tests\bin\Debug\net8.0\Exceptions.dll
 D:\Dot-Net-Projects\StockTradingApp\Tests\bin\Debug\net8.0\Exceptions.pdb
+D:\Dot-Net-Projects\StockTradingApp\Tests\bin\Debug\net8.0\StockTradingApp.staticwebassets.endpoints.json

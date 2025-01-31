@@ -1,0 +1,4 @@
+wwwroot\error.svg
+wwwroot\Rotativa\wkhtmltopdf.exe
+wwwroot\Scripts\FinnhubScript.js
+wwwroot\StyleSheet.css

@@ -11,3 +11,5 @@ build_property.RootNamespace = ServiceContracts
 build_property.ProjectDir = D:\Dot-Net-Projects\StockTradingApp\ServiceContracts\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
