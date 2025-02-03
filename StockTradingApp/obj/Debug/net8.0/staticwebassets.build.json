@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "kXZjwbhjmVeRYiug0Mgvbcliz5xSGoLCOmsKt14eoEM=",
+  "Hash": "OhvboskJJ2peTj4bnDwD5RYlOM3RucC8UIjsg00GIB4=",
   "Source": "StockTradingApp",
   "BasePath": "_content/StockTradingApp",
   "Mode": "Default",
@@ -73,8 +73,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "3ll3r4thnw",
-      "Integrity": "ByvvXtdXmostbc0SmwaOJkJfJWRKj0dp9b9OzUScOYQ=",
+      "Fingerprint": "znigc6oqz9",
+      "Integrity": "gdldLmhgqoqwpIsXfPC0SOlWwmLwGPIcJjmx4tZ0eSk=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Scripts\\FinnhubScript.js"
@@ -267,51 +267,6 @@
       ]
     },
     {
-      "Route": "Scripts/FinnhubScript.3ll3r4thnw.js",
-      "AssetFile": "D:\\Dot-Net-Projects\\StockTradingApp\\StockTradingApp\\wwwroot\\Scripts\\FinnhubScript.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1814"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"ByvvXtdXmostbc0SmwaOJkJfJWRKj0dp9b9OzUScOYQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 05 Nov 2024 14:47:23 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "3ll3r4thnw"
-        },
-        {
-          "Name": "label",
-          "Value": "Scripts/FinnhubScript.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-ByvvXtdXmostbc0SmwaOJkJfJWRKj0dp9b9OzUScOYQ="
-        }
-      ]
-    },
-    {
       "Route": "Scripts/FinnhubScript.js",
       "AssetFile": "D:\\Dot-Net-Projects\\StockTradingApp\\StockTradingApp\\wwwroot\\Scripts\\FinnhubScript.js",
       "Selectors": [],
@@ -322,7 +277,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1814"
+          "Value": "1358"
         },
         {
           "Name": "Content-Type",
@@ -330,11 +285,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"ByvvXtdXmostbc0SmwaOJkJfJWRKj0dp9b9OzUScOYQ=\""
+          "Value": "\"gdldLmhgqoqwpIsXfPC0SOlWwmLwGPIcJjmx4tZ0eSk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 05 Nov 2024 14:47:23 GMT"
+          "Value": "Mon, 03 Feb 2025 08:21:11 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -344,7 +299,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-ByvvXtdXmostbc0SmwaOJkJfJWRKj0dp9b9OzUScOYQ="
+          "Value": "sha256-gdldLmhgqoqwpIsXfPC0SOlWwmLwGPIcJjmx4tZ0eSk="
+        }
+      ]
+    },
+    {
+      "Route": "Scripts/FinnhubScript.znigc6oqz9.js",
+      "AssetFile": "D:\\Dot-Net-Projects\\StockTradingApp\\StockTradingApp\\wwwroot\\Scripts\\FinnhubScript.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1358"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gdldLmhgqoqwpIsXfPC0SOlWwmLwGPIcJjmx4tZ0eSk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 03 Feb 2025 08:21:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "znigc6oqz9"
+        },
+        {
+          "Name": "label",
+          "Value": "Scripts/FinnhubScript.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-gdldLmhgqoqwpIsXfPC0SOlWwmLwGPIcJjmx4tZ0eSk="
         }
       ]
     },

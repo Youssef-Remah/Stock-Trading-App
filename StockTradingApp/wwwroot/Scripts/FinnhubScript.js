@@ -1,58 +1,41 @@
-﻿//Create a WebSocket to perform duplex (back-and-forth) communication with server
-const token = document.querySelector("#FinnhubToken").value;
+﻿$(document).ready(function () {
+    var token = $("#FinnhubToken").val();
+    var stockSymbol = $("#StockSymbol").val();
 
-const socket = new WebSocket(`wss://ws.finnhub.io?token=${token}`);
+    var socket = new WebSocket(`wss://ws.finnhub.io?token=${token}`);
 
-var stockSymbol = document.getElementById("StockSymbol").value; //get symbol from input hidden
+    //if connection is open then subscribe to stock updates
+    socket.addEventListener("open", function () {
+        socket.send(JSON.stringify({ type: "subscribe", symbol: stockSymbol }));
+    });
 
-// Connection opened. Subscribe to a symbol
-socket.addEventListener('open', function (event) {
-    socket.send(JSON.stringify({ 'type': 'subscribe', 'symbol': stockSymbol }))
-});
+    //listen for incoming messages from finnhub (stock price updates)
+    socket.addEventListener("message", function (event) {
+        var eventData = JSON.parse(event.data);
 
-// Listen (ready to receive) for messages
-socket.addEventListener('message', function (event) {
-
-    //if error message is received from server
-    if (event.data.type == "error") {
-        $(".price").text(event.data.msg);
-        return; //exit the function
-    }
-
-    //data received from server
-    //console.log('Message from server ', event.data);
-
-    /* Sample response:
-    {"data":[{"p":220.89,"s":"MSFT","t":1575526691134,"v":100}],"type":"trade"}
-    type: message type
-    data: [ list of trades ]
-    s: symbol of the company
-    p: Last price
-    t: UNIX milliseconds timestamp
-    v: volume (number of orders)
-    c: trade conditions (if any)
-    */
-
-    var eventData = JSON.parse(event.data);
-    if (eventData) {
-        if (eventData.data) {
-            //get the updated price
-            var updatedPrice = JSON.parse(event.data).data[0].p;
-            //console.log(updatedPrice);
-
-            //update the UI
-            $(".price").text(updatedPrice.toFixed(2)); //price - big display
+        //check if an error message is received
+        if (eventData.type === "error") {
+            $(".price").text(eventData.msg);
+            return;
         }
+
+        //check if stock data is received
+        if (eventData.data && eventData.data.length > 0) {
+            var updatedPrice = eventData.data[0].p;
+
+            //update the UI with the new stock price
+            $(".price").text(updatedPrice.toFixed(2));
+        }
+    });
+
+    //function to unsubscribe from stock updates
+    function unsubscribe(symbol) {
+        socket.send(JSON.stringify({ type: "unsubscribe", symbol: symbol }));
     }
+
+    //unsubscribe when the page is closed
+    $(window).on("unload", function () {
+        unsubscribe(stockSymbol);
+    });
+
 });
-
-// Unsubscribe
-var unsubscribe = function (symbol) {
-    //disconnect from server
-    socket.send(JSON.stringify({ 'type': 'unsubscribe', 'symbol': symbol }))
-}
-
-//when the page is being closed, unsubscribe from the WebSocket
-window.onunload = function () {
-    unsubscribe(stockSsymbol);
-};

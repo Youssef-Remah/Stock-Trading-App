@@ -1,13 +1,6 @@
-using Entities;
-using Microsoft.AspNetCore.HttpLogging;
-using Microsoft.EntityFrameworkCore;
-using Repositories;
-using RepositoryContracts;
 using Serilog;
-using ServiceContracts;
-using Services;
-using StockTradingApp;
 using StockTradingApp.Middleware;
+using StockTradingApp.StartupExtensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,35 +13,10 @@ builder.Host.UseSerilog(
     }
 );
 
-//Services
-builder.Services.AddControllersWithViews();
+//Configure Services
+builder.Services.ConfigureServices(builder.Configuration);
 
-builder.Services.Configure<TradingOptions>(
-	builder.Configuration.GetSection("TradingOptions")
-);
-
-builder.Services.AddTransient<IFinnhubService, FinnhubService>();
-
-builder.Services.AddTransient<IStocksService, StocksService>();
-
-builder.Services.AddTransient<IFinnhubRepository, FinnhubRepository>();
-
-builder.Services.AddTransient<IStocksRepository, StocksRepository>();
-
-builder.Services.AddTransient<ExceptionHandlingMiddleware>();
-
-builder.Services.AddHttpClient();
-
-builder.Services.AddDbContext<StockMarketDbContext>(options => {
-	options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
-});
-
-builder.Services.AddHttpLogging(options =>
-{
-    options.LoggingFields = HttpLoggingFields.RequestProperties | HttpLoggingFields.ResponsePropertiesAndHeaders;
-});
-
-var app = builder.Build();
+WebApplication app = builder.Build();
 
 if (builder.Environment.IsDevelopment())
 {

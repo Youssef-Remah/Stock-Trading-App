@@ -48,8 +48,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>3ll3r4thnw</Fingerprint>
-      <Integrity>ByvvXtdXmostbc0SmwaOJkJfJWRKj0dp9b9OzUScOYQ=</Integrity>
+      <Fingerprint>znigc6oqz9</Fingerprint>
+      <Integrity>gdldLmhgqoqwpIsXfPC0SOlWwmLwGPIcJjmx4tZ0eSk=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Scripts\FinnhubScript.js'))</OriginalItemSpec>

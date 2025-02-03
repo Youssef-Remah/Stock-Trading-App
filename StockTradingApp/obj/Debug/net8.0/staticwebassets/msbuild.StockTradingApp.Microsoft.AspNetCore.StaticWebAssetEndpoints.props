@@ -24,17 +24,17 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-ZNF2gjIL/9RbIgjtE7E21ZE56CVzdF8UVWzyXpXL2Ag="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"41563648"},{"Name":"Content-Type","Value":"application/vnd.microsoft.portable-executable"},{"Name":"ETag","Value":"\u0022ZNF2gjIL/9RbIgjtE7E21ZE56CVzdF8UVWzyXpXL2Ag=\u0022"},{"Name":"Last-Modified","Value":"Thu, 11 Jun 2020 00:24:30 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/StockTradingApp/Scripts/FinnhubScript.3ll3r4thnw.js">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Scripts\FinnhubScript.js'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"3ll3r4thnw"},{"Name":"integrity","Value":"sha256-ByvvXtdXmostbc0SmwaOJkJfJWRKj0dp9b9OzUScOYQ="},{"Name":"label","Value":"_content/StockTradingApp/Scripts/FinnhubScript.js"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1814"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022ByvvXtdXmostbc0SmwaOJkJfJWRKj0dp9b9OzUScOYQ=\u0022"},{"Name":"Last-Modified","Value":"Tue, 05 Nov 2024 14:47:23 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/StockTradingApp/Scripts/FinnhubScript.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Scripts\FinnhubScript.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-ByvvXtdXmostbc0SmwaOJkJfJWRKj0dp9b9OzUScOYQ="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1814"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022ByvvXtdXmostbc0SmwaOJkJfJWRKj0dp9b9OzUScOYQ=\u0022"},{"Name":"Last-Modified","Value":"Tue, 05 Nov 2024 14:47:23 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-gdldLmhgqoqwpIsXfPC0SOlWwmLwGPIcJjmx4tZ0eSk="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1358"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022gdldLmhgqoqwpIsXfPC0SOlWwmLwGPIcJjmx4tZ0eSk=\u0022"},{"Name":"Last-Modified","Value":"Mon, 03 Feb 2025 08:21:11 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/StockTradingApp/Scripts/FinnhubScript.znigc6oqz9.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Scripts\FinnhubScript.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"znigc6oqz9"},{"Name":"integrity","Value":"sha256-gdldLmhgqoqwpIsXfPC0SOlWwmLwGPIcJjmx4tZ0eSk="},{"Name":"label","Value":"_content/StockTradingApp/Scripts/FinnhubScript.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1358"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022gdldLmhgqoqwpIsXfPC0SOlWwmLwGPIcJjmx4tZ0eSk=\u0022"},{"Name":"Last-Modified","Value":"Mon, 03 Feb 2025 08:21:11 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/StockTradingApp/StyleSheet.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\StyleSheet.css'))</AssetFile>
