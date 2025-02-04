@@ -1,42 +1,20 @@
 ﻿using Entities;
-using Microsoft.EntityFrameworkCore;
 using RepositoryContracts;
-using ServiceContracts;
 using ServiceContracts.DTO;
+using ServiceContracts.StocksService;
 using Services.Helpers;
 
-namespace Services
+namespace Services.StocksService
 {
-    public class StocksService : IStocksService
+    public class StocksSellOrdersService : ISellOrdersService
     {
         private readonly IStocksRepository _stocksRepository;
 
-        public StocksService(IStocksRepository stocksRepository)
+        public StocksSellOrdersService(IStocksRepository stocksRepository)
         {
             _stocksRepository = stocksRepository;
         }
 
-
-        public async Task<BuyOrderResponse> CreateBuyOrder(BuyOrderRequest? buyOrderRequest)
-        {
-            //check if buyOrderRequest is null
-            ArgumentNullException.ThrowIfNull(nameof(buyOrderRequest));
-
-            //Model Validation
-            ValidationHelper.ModelValidator(buyOrderRequest!);
-
-            //Convert BuyOrderRequest to BuyOrder entity object
-            BuyOrder buyOrder = buyOrderRequest!.ToBuyOrder();
-
-            //Assign the BuyOrder item a new generated ID
-            buyOrder.BuyOrderID = Guid.NewGuid();
-
-            //Insert BuyOrder item into the database table 'BuyOrders'
-            await _stocksRepository.CreateBuyOrder(buyOrder);
-
-            //Return BuyOrderResponse object
-            return await Task.FromResult(buyOrder.ToBuyOrderResponse());
-        }
 
         public async Task<SellOrderResponse> CreateSellOrder(SellOrderRequest? sellOrderRequest)
         {
@@ -57,16 +35,6 @@ namespace Services
 
             //Return the SellOrderResponse object
             return await Task.FromResult(sellOrder.ToSellOrderResponse());
-        }
-
-        public async Task<List<BuyOrderResponse>> GetBuyOrders()
-        {
-            List<BuyOrder> buyOrders = await _stocksRepository.GetBuyOrders();
-
-            List<BuyOrderResponse> buyOrderResponses = buyOrders.Select(buyOrder => 
-            buyOrder.ToBuyOrderResponse()).ToList();
-
-            return await Task.FromResult(buyOrderResponses);
         }
 
         public async Task<List<SellOrderResponse>> GetSellOrders()

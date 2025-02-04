@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using ServiceContracts;
+using ServiceContracts.StocksService;
 
 namespace StockTradingApp.ViewComponents
 {
@@ -8,7 +9,7 @@ namespace StockTradingApp.ViewComponents
     {
 
         private readonly TradingOptions _tradingOptions;
-        private readonly IStocksService _stocksService;
+        private readonly IBuyOrdersService _stocksService;
         private readonly IFinnhubService _finnhubService;
         private readonly IConfiguration _configuration;
 
@@ -20,7 +21,7 @@ namespace StockTradingApp.ViewComponents
         /// <param name="stocksService">Injecting StocksService</param>
         /// <param name="finnhubService">Injecting FinnhubService</param>
         /// <param name="configuration">Injecting IConfiguration</param>
-        public SelectedStockViewComponent(IOptions<TradingOptions> tradingOptions, IStocksService stocksService, IFinnhubService finnhubService, IConfiguration configuration)
+        public SelectedStockViewComponent(IOptions<TradingOptions> tradingOptions, IBuyOrdersService stocksService, IFinnhubService finnhubService, IConfiguration configuration)
         {
             _tradingOptions = tradingOptions.Value;
             _stocksService = stocksService;

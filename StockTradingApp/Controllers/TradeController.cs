@@ -3,6 +3,7 @@ using Microsoft.Extensions.Options;
 using Rotativa.AspNetCore;
 using ServiceContracts;
 using ServiceContracts.DTO;
+using ServiceContracts.StocksService;
 using StockTradingApp.Filters.ActionFilters;
 using StockTradingApp.Models;
 
@@ -18,7 +19,9 @@ namespace StockTradingApp.Controllers
 
 		private readonly IFinnhubService _finnhubService;
 
-		private readonly IStocksService _stocksService;
+		private readonly IBuyOrdersService _stocksBuyOrdersService;
+
+		private readonly ISellOrdersService _stocksSellOrdersService;
 
 		private readonly ILogger<TradeController> _logger;
 
@@ -30,7 +33,9 @@ namespace StockTradingApp.Controllers
 
 			IFinnhubService finnhubService,
 
-			IStocksService stocksService,
+            IBuyOrdersService stocksBuyOrdersService,
+
+            ISellOrdersService stocksSellOrdersService,
 
             ILogger<TradeController> logger
         )
@@ -41,9 +46,11 @@ namespace StockTradingApp.Controllers
 
 			_finnhubService = finnhubService;
 
-			_stocksService = stocksService;
+			_stocksBuyOrdersService = stocksBuyOrdersService;
 
-			_logger = logger;
+			_stocksSellOrdersService = stocksSellOrdersService;
+
+            _logger = logger;
 		}
 
 
@@ -90,7 +97,7 @@ namespace StockTradingApp.Controllers
 		[TypeFilter(typeof(CreateOrderActionFilter))]
 		public async Task<IActionResult> BuyOrder(BuyOrderRequest orderRequest)
 		{
-			BuyOrderResponse buyOrderResponse = await _stocksService.CreateBuyOrder(orderRequest);
+			BuyOrderResponse buyOrderResponse = await _stocksBuyOrdersService.CreateBuyOrder(orderRequest);
 
 			return RedirectToAction(nameof(Orders));
 		}
@@ -101,7 +108,7 @@ namespace StockTradingApp.Controllers
 		[TypeFilter(typeof(CreateOrderActionFilter))]
 		public async Task<IActionResult> SellOrder(SellOrderRequest orderRequest)
 		{
-			SellOrderResponse sellOrderResponse = await _stocksService.CreateSellOrder(orderRequest);
+			SellOrderResponse sellOrderResponse = await _stocksSellOrdersService.CreateSellOrder(orderRequest);
 
 			return RedirectToAction(nameof(Orders));
 		}
@@ -111,9 +118,9 @@ namespace StockTradingApp.Controllers
 		[Route("[action]")]
 		public async Task<IActionResult> Orders()
 		{
-			List<BuyOrderResponse> buyOrderResponses = await _stocksService.GetBuyOrders();
+			List<BuyOrderResponse> buyOrderResponses = await _stocksBuyOrdersService.GetBuyOrders();
 
-			List<SellOrderResponse> sellOrderResponses = await _stocksService.GetSellOrders();
+			List<SellOrderResponse> sellOrderResponses = await _stocksSellOrdersService.GetSellOrders();
 
 
 			Models.Orders orders = new()
@@ -136,9 +143,9 @@ namespace StockTradingApp.Controllers
 		{
 			Models.Orders orders = new();
 
-			orders.BuyOrders = await _stocksService.GetBuyOrders();
+			orders.BuyOrders = await _stocksBuyOrdersService.GetBuyOrders();
 
-			orders.SellOrders = await _stocksService.GetSellOrders();
+			orders.SellOrders = await _stocksSellOrdersService.GetSellOrders();
 
 			return new ViewAsPdf(orders)
 			{

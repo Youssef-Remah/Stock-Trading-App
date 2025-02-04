@@ -4,7 +4,9 @@ using Microsoft.EntityFrameworkCore;
 using Repositories;
 using RepositoryContracts;
 using ServiceContracts;
+using ServiceContracts.StocksService;
 using Services;
+using Services.StocksService;
 using StockTradingApp.Middleware;
 
 namespace StockTradingApp.StartupExtensions
@@ -21,7 +23,9 @@ namespace StockTradingApp.StartupExtensions
 
             services.AddTransient<IFinnhubService, FinnhubService>();
 
-            services.AddTransient<IStocksService, StocksService>();
+            services.AddTransient<ISellOrdersService, StocksSellOrdersService>();
+
+            services.AddTransient<IBuyOrdersService, StocksBuyOrdersService>();
 
             services.AddTransient<IFinnhubRepository, FinnhubRepository>();
 
