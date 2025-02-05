@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
-using ServiceContracts;
+using ServiceContracts.FinnhubService;
 using StockTradingApp.Models;
 
 namespace StockTradingApp.Controllers
@@ -10,7 +10,7 @@ namespace StockTradingApp.Controllers
     {
         private readonly TradingOptions _tradingOptions;
 
-        private readonly IFinnhubService _finnhubService;
+        private readonly IFinnhubStocksService _finnhubService;
 
         private readonly ILogger<StocksController> _logger;
 
@@ -18,7 +18,7 @@ namespace StockTradingApp.Controllers
         public StocksController(
             IOptions<TradingOptions> tradingOptions,
 
-            IFinnhubService finnhubService,
+            IFinnhubStocksService finnhubService,
 
             ILogger<StocksController> logger
         )

@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Moq;
-using ServiceContracts;
+using ServiceContracts.FinnhubService;
 using StockTradingApp;
 using StockTradingApp.Controllers;
 using StockTradingApp.Models;
@@ -15,11 +15,11 @@ namespace Tests.ControllerTests
     {
         private IOptions<TradingOptions>? _tradingOptions;
 
-        private readonly Mock<IFinnhubService> _finnhubServiceMock;
+        private readonly Mock<IFinnhubStocksService> _finnhubServiceMock;
 
         private readonly Mock<ILogger<StocksController>> _loggerMock;
 
-        private readonly IFinnhubService _finnhubService;
+        private readonly IFinnhubStocksService _finnhubService;
 
         private StocksController? _stocksController;
 

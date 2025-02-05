@@ -3,9 +3,9 @@ using Microsoft.AspNetCore.HttpLogging;
 using Microsoft.EntityFrameworkCore;
 using Repositories;
 using RepositoryContracts;
-using ServiceContracts;
+using ServiceContracts.FinnhubService;
 using ServiceContracts.StocksService;
-using Services;
+using Services.FinnhubService;
 using Services.StocksService;
 using StockTradingApp.Middleware;
 
@@ -21,7 +21,13 @@ namespace StockTradingApp.StartupExtensions
                 configuration.GetSection("TradingOptions")
             );
 
-            services.AddTransient<IFinnhubService, FinnhubService>();
+            services.AddTransient<IFinnhubStocksService, FinnhubStocksService>();
+
+            services.AddTransient<IFinnhubStockPriceQuoteService, FinnhubStockPriceQuoteService>();
+
+            services.AddTransient<IFinnhubSearchStocksService, FinnhubSearchStocksService>();
+
+            services.AddTransient<IFinnhubCompanyProfileService, FinnhubCompanyProfileService>();
 
             services.AddTransient<ISellOrdersService, StocksSellOrdersService>();
 

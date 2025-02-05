@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using Rotativa.AspNetCore;
-using ServiceContracts;
 using ServiceContracts.DTO;
+using ServiceContracts.FinnhubService;
 using ServiceContracts.StocksService;
 using StockTradingApp.Filters.ActionFilters;
 using StockTradingApp.Models;
@@ -17,7 +17,9 @@ namespace StockTradingApp.Controllers
 
 		private readonly TradingOptions _tradingOptions;
 
-		private readonly IFinnhubService _finnhubService;
+		private readonly IFinnhubStockPriceQuoteService _finnhubStockPriceQuoteService;
+
+		private readonly IFinnhubCompanyProfileService _finnhubCompanyProfileService;
 
 		private readonly IBuyOrdersService _stocksBuyOrdersService;
 
@@ -31,7 +33,9 @@ namespace StockTradingApp.Controllers
 
 			IOptions<TradingOptions> tradingOptions,
 
-			IFinnhubService finnhubService,
+            IFinnhubStockPriceQuoteService finnhubStockPriceQuoteService,
+
+            IFinnhubCompanyProfileService finnhubCompanyProfileService,
 
             IBuyOrdersService stocksBuyOrdersService,
 
@@ -44,7 +48,9 @@ namespace StockTradingApp.Controllers
 
 			_tradingOptions = tradingOptions.Value;
 
-			_finnhubService = finnhubService;
+            _finnhubStockPriceQuoteService = finnhubStockPriceQuoteService;
+
+            _finnhubCompanyProfileService = finnhubCompanyProfileService;
 
 			_stocksBuyOrdersService = stocksBuyOrdersService;
 
@@ -70,10 +76,10 @@ namespace StockTradingApp.Controllers
 
 
 			//get company profile from API server
-			Dictionary<string, object>? companyProfileDictionary = await _finnhubService.GetCompanyProfile(stockSymbol);
+			Dictionary<string, object>? companyProfileDictionary = await _finnhubCompanyProfileService.GetCompanyProfile(stockSymbol);
 
 			//get stock price quotes from API server
-			Dictionary<string, object>? stockQuoteDictionary = await _finnhubService.GetStockPriceQuote(stockSymbol);
+			Dictionary<string, object>? stockQuoteDictionary = await _finnhubStockPriceQuoteService.GetStockPriceQuote(stockSymbol);
 
 
 			//create model object
