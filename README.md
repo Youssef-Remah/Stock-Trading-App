@@ -1,16 +1,22 @@
 # Stock Trading App
 
-The Stock Trading App is an **ASP.NET Core 8 web application** that displays real-time stock prices using data from Finnhub.io. It fetches and displays real-time stock prices using the Finnhub.io API, providing a user-friendly interface to view market data. The app is designed with the **MVC architecture**, follows the **repository pattern** for data management, and includes **unit tests** to ensure reliability. The application uses **SQL Server** for data storage and **Entity Framework Core** for database operations, and includes **logging capabilities** to monitor and debug the application effectively.
+The Stock Trading App is an **ASP.NET Core 8 web application** that displays real-time stock prices using data from Finnhub.io. It provides a user-friendly interface for viewing market data and is structured using a **4-Tier Architecture**, where the **MVC pattern** is applied at the Presentation Layer.
+
+The application follows the **Repository Pattern** for data management, ensuring separation of concerns. It includes **unit and integration tests** to enhance reliability. **SQL Server** is used for data storage, managed via **Entity Framework Core**. The application provides **logging** capabilities using **Serilog**.
 
 ## Features
 
 - **Real-Time Stock Prices:** Live updates of stock prices fetched from Finnhub.io.
 
-- **MVC Architecture:** Structured using the Model-View-Controller design pattern for organized code management.
+- **4-Tier Architecture – Structured into:**
+    - Presentation Layer (MVC for UI and Controllers)
+    - Business Logic Layer (BLL)
+    - Repository Layer (Interaction with DAL)
+    - Data Access Layer (DAL)
 
 - **Repository Pattern:** Implements the repository pattern to manage data access, promoting separation of concerns.
 
-- **Unit Testing:** Comprehensive tests using xUnit to ensure application reliability.
+- **Unit Testing:** Comprehensive unit tests using xUnit to ensure application reliability.
 
 - **Integration Testing:** Integration tests to verify end-to-end functionality and ensure proper functioning of all components.
 
